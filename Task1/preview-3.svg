@@ -1,0 +1,99 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1900" height="1500" viewBox="0 0 1900 1500">
+<defs><marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="context-stroke"/></marker></defs>
+<rect width="100%" height="100%" fill="white"/>
+<rect x="30" y="20" width="1840" height="80" rx="12" fill="#e3ebff" stroke="#5282ff"/>
+<text x="44" y="47" font-family="Arial, sans-serif" font-size="22" font-weight="bold" fill="#172c4c">Переключение и восстановление</text>
+<text x="44" y="75" font-family="Arial, sans-serif" font-size="22" font-weight="normal" fill="#172c4c">RTO считается с момента отказа до успешной клиентской операции; RPO — по последним подтверждённым данным</text>
+<rect x="30" y="135" width="890" height="240" rx="12" fill="#eef8f0" stroke="#64a978"/>
+<text x="44" y="162" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#172c4c">Обычный отказ: pod / worker / одна AZ</text>
+<text x="44" y="184" font-family="Arial, sans-serif" font-size="16" font-weight="normal" fill="#172c4c">Active-active внутри A: LB удаляет неисправные endpoints; оставшиеся AZ несут пик.</text>
+<text x="44" y="206" font-family="Arial, sans-serif" font-size="16" font-weight="normal" fill="#172c4c">PostgreSQL: synchronous_mode=on, synchronous_mode_strict=true, synchronous_node_count=1.</text>
+<text x="44" y="228" font-family="Arial, sans-serif" font-size="16" font-weight="normal" fill="#172c4c">synchronous_commit=on; sync standby в другой AZ; отдельная третья streaming replica.</text>
+<text x="44" y="250" font-family="Arial, sans-serif" font-size="16" font-weight="normal" fill="#172c4c">Patroni повышает допустимую sync-копию, HAProxy находит новый primary.</text>
+<text x="44" y="272" font-family="Arial, sans-serif" font-size="16" font-weight="normal" fill="#172c4c">DCS quorum 2/3 + watchdog защищают от split-brain; потеря quorum останавливает запись.</text>
+<text x="44" y="294" font-family="Arial, sans-serif" font-size="16" font-weight="normal" fill="#172c4c">Цель RTO ≤ 2 мин, RPO = 0 для успешно подтверждённых commit при одиночном отказе.</text>
+<text x="44" y="316" font-family="Arial, sans-serif" font-size="16" font-weight="normal" fill="#172c4c">Прерванная операция может иметь неизвестный исход: повтор только с Idempotency-Key.</text>
+<rect x="970" y="135" width="900" height="240" rx="12" fill="#fff6dc" stroke="#d6a239"/>
+<text x="984" y="162" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#172c4c">Межрегиональный RPO ≤ 15 мин: не только async replication</text>
+<text x="984" y="184" font-family="Arial, sans-serif" font-size="16" font-weight="normal" fill="#172c4c">Primary A пишет heartbeat с timestamp/LSN каждые 10 с; B сообщает durable flush LSN.</text>
+<text x="984" y="206" font-family="Arial, sans-serif" font-size="16" font-weight="normal" fill="#172c4c">Сопоставление LSN и времени даёт возраст последней сохранённой точки, включая простой.</text>
+<text x="984" y="228" font-family="Arial, sans-serif" font-size="16" font-weight="normal" fill="#172c4c">Lag &gt; 5 мин: page; &gt; 10 мин: закрыть все write-path, Cron и незавершённые транзакции.</text>
+<text x="984" y="250" font-family="Arial, sans-serif" font-size="16" font-weight="normal" fill="#172c4c">Разрешение записи выдаётся на ≤ 60 с; без обновления закрывается доступ через DB proxy.</text>
+<text x="984" y="272" font-family="Arial, sans-serif" font-size="16" font-weight="normal" fill="#172c4c">Контроль и остановка ≤ 60 с, погрешность часов ≤ 10 с: окно потери &lt; 12 мин.</text>
+<text x="984" y="294" font-family="Arial, sans-serif" font-size="16" font-weight="normal" fill="#172c4c">Fail-closed действует на ВСЕХ писателей, не только на ingress; обходной доступ запрещён.</text>
+<text x="984" y="316" font-family="Arial, sans-serif" font-size="16" font-weight="normal" fill="#172c4c">Это отдельный обязательный механизм; один alert или лимит lag в байтах RPO не обеспечит.</text>
+<rect x="30" y="435" width="320" height="140" rx="12" fill="#f5f8ff" stroke="#5282ff"/>
+<text x="44" y="462" font-family="Arial, sans-serif" font-size="17" font-weight="bold" fill="#172c4c">1. Обнаружить</text>
+<text x="44" y="485" font-family="Arial, sans-serif" font-size="17" font-weight="normal" fill="#172c4c">H1 + H10 → инцидент</text>
+<text x="44" y="508" font-family="Arial, sans-serif" font-size="17" font-weight="normal" fill="#172c4c">Дежурный 24/7</text>
+<text x="44" y="531" font-family="Arial, sans-serif" font-size="17" font-weight="normal" fill="#172c4c">Бюджет: 2 мин</text>
+<rect x="410" y="435" width="320" height="140" rx="12" fill="#f5f8ff" stroke="#5282ff"/>
+<text x="424" y="462" font-family="Arial, sans-serif" font-size="17" font-weight="bold" fill="#172c4c">2. Изолировать A</text>
+<text x="424" y="485" font-family="Arial, sans-serif" font-size="17" font-weight="normal" fill="#172c4c">Отозвать write lease</text>
+<text x="424" y="508" font-family="Arial, sans-serif" font-size="17" font-weight="normal" fill="#172c4c">Fence всех PG VM в A</text>
+<text x="424" y="531" font-family="Arial, sans-serif" font-size="17" font-weight="normal" fill="#172c4c">Бюджет: 5 мин</text>
+<rect x="790" y="435" width="320" height="140" rx="12" fill="#f5f8ff" stroke="#5282ff"/>
+<text x="804" y="462" font-family="Arial, sans-serif" font-size="17" font-weight="bold" fill="#172c4c">3. Повысить B</text>
+<text x="804" y="485" font-family="Arial, sans-serif" font-size="17" font-weight="normal" fill="#172c4c">Проверить WAL / timeline</text>
+<text x="804" y="508" font-family="Arial, sans-serif" font-size="17" font-weight="normal" fill="#172c4c">Replay → promote → sync</text>
+<text x="804" y="531" font-family="Arial, sans-serif" font-size="17" font-weight="normal" fill="#172c4c">Бюджет: 5 мин</text>
+<rect x="1170" y="435" width="320" height="140" rx="12" fill="#f5f8ff" stroke="#5282ff"/>
+<text x="1184" y="462" font-family="Arial, sans-serif" font-size="17" font-weight="bold" fill="#172c4c">4. Проверить B</text>
+<text x="1184" y="485" font-family="Arial, sans-serif" font-size="17" font-weight="normal" fill="#172c4c">Версии, секреты, workers</text>
+<text x="1184" y="508" font-family="Arial, sans-serif" font-size="17" font-weight="normal" fill="#172c4c">Smoke: чтение + запись</text>
+<text x="1184" y="531" font-family="Arial, sans-serif" font-size="17" font-weight="normal" fill="#172c4c">Бюджет: 5 мин</text>
+<rect x="1550" y="435" width="320" height="140" rx="12" fill="#f5f8ff" stroke="#5282ff"/>
+<text x="1564" y="462" font-family="Arial, sans-serif" font-size="17" font-weight="bold" fill="#172c4c">5. Открыть трафик</text>
+<text x="1564" y="485" font-family="Arial, sans-serif" font-size="17" font-weight="normal" fill="#172c4c">H1=200 → edge route B</text>
+<text x="1564" y="508" font-family="Arial, sans-serif" font-size="17" font-weight="normal" fill="#172c4c">Клиент повторяет запрос</text>
+<text x="1564" y="531" font-family="Arial, sans-serif" font-size="17" font-weight="normal" fill="#172c4c">Бюджет: 3 мин</text>
+<rect x="30" y="635" width="890" height="270" rx="12" fill="#e3ebff" stroke="#5282ff"/>
+<text x="44" y="662" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#172c4c">Клиент → edge → B • целевой RTO 20 мин, резерв 25 мин</text>
+<text x="44" y="684" font-family="Arial, sans-serif" font-size="16" font-weight="normal" fill="#172c4c">Edge endpoint и DNS для клиента сохраняются: переключается origin с A на B.</text>
+<text x="44" y="706" font-family="Arial, sans-serif" font-size="16" font-weight="normal" fill="#172c4c">На время перехода API отвечает 503 + Retry-After; статика остаётся в CDN.</text>
+<text x="44" y="728" font-family="Arial, sans-serif" font-size="16" font-weight="normal" fill="#172c4c">B2B/браузер: backoff с jitter, общий timeout; повтор записи с тем же ключом идемпотентности.</text>
+<text x="44" y="750" font-family="Arial, sans-serif" font-size="16" font-weight="normal" fill="#172c4c">В A отключаются все PG VM / маршруты записи; одного DNS-переключения недостаточно.</text>
+<text x="44" y="772" font-family="Arial, sans-serif" font-size="16" font-weight="normal" fill="#172c4c">Если fencing не доказан, B не становится writable: предотвращается двойной primary.</text>
+<text x="44" y="794" font-family="Arial, sans-serif" font-size="16" font-weight="normal" fill="#172c4c">Promotion только после проверки непрерывности WAL, flush watermark и допустимого RPO.</text>
+<text x="44" y="816" font-family="Arial, sans-serif" font-size="16" font-weight="normal" fill="#172c4c">Удалить standby_cluster в DCS B; дождаться локальной sync-копии; открыть DB write lease.</text>
+<text x="44" y="838" font-family="Arial, sans-serif" font-size="16" font-weight="normal" fill="#172c4c">Восстановленную A присоединить через pg_rewind/basebackup; failback вручную по регламенту.</text>
+<text x="44" y="860" font-family="Arial, sans-serif" font-size="16" font-weight="normal" fill="#172c4c">После promote write guard следит за внешним WAL-архивом; далее — за репликацией B → A.</text>
+<rect x="970" y="635" width="900" height="270" rx="12" fill="#fff6dc" stroke="#d6a239"/>
+<text x="984" y="662" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#172c4c">Повреждение данных: pgBackRest + PITR в чистый кластер</text>
+<text x="984" y="684" font-family="Arial, sans-serif" font-size="16" font-weight="normal" fill="#172c4c">Репликация переносит ошибочное удаление; нужен независимый неизменяемый backup.</text>
+<text x="984" y="706" font-family="Arial, sans-serif" font-size="16" font-weight="normal" fill="#172c4c">Полный backup раз в неделю, differential ежедневно, WAL непрерывно; retention ≥ 35 дней.</text>
+<text x="984" y="728" font-family="Arial, sans-serif" font-size="16" font-weight="normal" fill="#172c4c">archive_timeout=60 с задаёт частоту закрытия WAL, но не гарантирует срок доставки.</text>
+<text x="984" y="750" font-family="Arial, sans-serif" font-size="16" font-weight="normal" fill="#172c4c">H8 контролирует доставку; при нарушении окна сохранности действует write guard.</text>
+<text x="984" y="772" font-family="Arial, sans-serif" font-size="16" font-weight="normal" fill="#172c4c">План RTO: 5 мин определить точку + 15 восстановить + 10 replay + 10 проверить/переключить.</text>
+<text x="984" y="794" font-family="Arial, sans-serif" font-size="16" font-weight="normal" fill="#172c4c">50 GB за 15 мин требуют ≥ 56 MB/s только на данные; ресурс резервируется и измеряется.</text>
+<text x="984" y="816" font-family="Arial, sans-serif" font-size="16" font-weight="normal" fill="#172c4c">До запуска нужны тесты на реальном объёме WAL; 40 мин — бюджет, а не доказанный результат.</text>
+<text x="984" y="838" font-family="Arial, sans-serif" font-size="16" font-weight="normal" fill="#172c4c">При позднем обнаружении логической ошибки нельзя обещать RPO 15 мин одним PITR.</text>
+<rect x="30" y="960" width="890" height="225" rx="12" fill="#eef8f0" stroke="#64a978"/>
+<text x="44" y="987" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#172c4c">99,9% • бюджет ошибок и зависимости</text>
+<text x="44" y="1009" font-family="Arial, sans-serif" font-size="16" font-weight="normal" fill="#172c4c">За 30 дней допускается 43 мин 12 с недоступности; за год — около 8 ч 46 мин.</text>
+<text x="44" y="1031" font-family="Arial, sans-serif" font-size="16" font-weight="normal" fill="#172c4c">Один инцидент на 45 мин уже превышает месячный бюджет: RTO — предел, не цель.</text>
+<text x="44" y="1053" font-family="Arial, sans-serif" font-size="16" font-weight="normal" fill="#172c4c">SLI: успешная загрузка и ключевые API в пределах latency budget; ошибки и таймауты считаются.</text>
+<text x="44" y="1075" font-family="Arial, sans-serif" font-size="16" font-weight="normal" fill="#172c4c">Контроль p95/p99, 5xx, очередей, OOM, DB IOPS, пулов, WAL, backup и оставшегося error budget.</text>
+<text x="44" y="1097" font-family="Arial, sans-serif" font-size="16" font-weight="normal" fill="#172c4c">Плановые обновления — поочерёдно, с rollback; круглосуточное дежурство и DR-учения.</text>
+<text x="44" y="1119" font-family="Arial, sans-serif" font-size="16" font-weight="normal" fill="#172c4c">Недоступность страховщика ограничивается timeout/circuit breaker и частичным результатом.</text>
+<rect x="970" y="960" width="900" height="225" rx="12" fill="#f3efff" stroke="#9b85c6"/>
+<text x="984" y="987" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#172c4c">Условия применимости проекта</text>
+<text x="984" y="1009" font-family="Arial, sans-serif" font-size="16" font-weight="normal" fill="#172c4c">B — реально отдельный регион РФ / провайдер с 3 локальными доменами отказа и HA сетью.</text>
+<text x="984" y="1031" font-family="Arial, sans-serif" font-size="16" font-weight="normal" fill="#172c4c">Не утверждается наличие регионов YC в Сибири или на Дальнем Востоке.</text>
+<text x="984" y="1053" font-family="Arial, sans-serif" font-size="16" font-weight="normal" fill="#172c4c">Edge/DNS и backup не зависят от control-plane A; управление B и ключи доступны при потере A.</text>
+<text x="984" y="1075" font-family="Arial, sans-serif" font-size="16" font-weight="normal" fill="#172c4c">Нужны зарезервированные мощности, два WAN-канала и fencing с независимым управлением.</text>
+<text x="984" y="1097" font-family="Arial, sans-serif" font-size="16" font-weight="normal" fill="#172c4c">SLO региональной скорости и бюджет PITR подтверждаются до рекламной кампании.</text>
+<text x="984" y="1119" font-family="Arial, sans-serif" font-size="16" font-weight="normal" fill="#172c4c">RTO/RPO при одновременной потере обеих площадок вне модели одиночного отказа.</text>
+<rect x="30" y="1240" width="1840" height="190" rx="12" fill="#f8faff" stroke="#5282ff"/>
+<text x="44" y="1267" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#172c4c">Приёмка перед промышленным запуском</text>
+<text x="44" y="1289" font-family="Arial, sans-serif" font-size="16" font-weight="normal" fill="#172c4c">1. Отключить pod, worker и целую AZ под проектным пиком; измерить клиентский простой ≤ 2 мин, проверить отсутствие потери подтверждённых заявок.</text>
+<text x="44" y="1311" font-family="Arial, sans-serif" font-size="16" font-weight="normal" fill="#172c4c">2. Разорвать WAN и канал мониторинга; убедиться, что через ≤ 11 мин блокируются ВСЕ новые записи, включая фоновые задачи и существующие DB-соединения.</text>
+<text x="44" y="1333" font-family="Arial, sans-serif" font-size="16" font-weight="normal" fill="#172c4c">3. Изолировать A; подтвердить fencing, повысить B, восстановить клиентский путь ≤ 20 мин и сверить RPO по журналу подтверждений / Idempotency-Key.</text>
+<text x="44" y="1355" font-family="Arial, sans-serif" font-size="16" font-weight="normal" fill="#172c4c">4. Восстановить 50 GB и накопленный WAL из независимого backup; измерить RTO ≤ 40 мин; проверить данные, права, секреты и отсутствие дубликатов.</text>
+<text x="44" y="1377" font-family="Arial, sans-serif" font-size="16" font-weight="normal" fill="#172c4c">5. Прогнать LCP/API из регионов, скачок нагрузки и шумного B2B-партнёра; проверить 429, ресурсный запас, алерты и обновление без простоя.</text>
+<text x="44" y="1399" font-family="Arial, sans-serif" font-size="16" font-weight="normal" fill="#172c4c">Ни один из этих тестов не выдаётся за выполненный: в Task1 создан архитектурный проект, без развёртывания инфраструктуры.</text>
+<polyline points="350,505 410,505" fill="none" stroke="#385a8a" stroke-width="2" marker-end="url(#arrow)"/>
+<polyline points="730,505 790,505" fill="none" stroke="#385a8a" stroke-width="2" marker-end="url(#arrow)"/>
+<polyline points="1110,505 1170,505" fill="none" stroke="#385a8a" stroke-width="2" marker-end="url(#arrow)"/>
+<polyline points="1490,505 1550,505" fill="none" stroke="#385a8a" stroke-width="2" marker-end="url(#arrow)"/>
+</svg>
