@@ -1,0 +1,216 @@
+<?xml version='1.0' encoding='utf-8'?>
+<mxfile host="app.diagrams.net" version="24.7.8">
+  <diagram id="task3-to-be" name="InsureTech — Event Streaming">
+    <mxGraphModel dx="2440" dy="1840" grid="1" gridSize="10" page="1" pageScale="1" pageWidth="2440" pageHeight="1840">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="title" value="InsureTech — Event-Driven архитектура" style="text;html=0;fontSize=30;align=left;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="40" y="20" width="1000" height="45" as="geometry" />
+        </mxCell>
+        <mxCell id="boundary" value="" style="rounded=0;dashed=1;dashPattern=8 6;fillColor=none;strokeColor=#98a2b3;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="345" y="210" width="1710" height="1420" as="geometry" />
+        </mxCell>
+        <mxCell id="scope" value="InsureTech [Software System] — логическая граница" style="text;html=0;fontSize=20;align=left;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="375" y="220" width="680" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="use" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=0;endArrow=block;endFill=1;strokeColor=#667085;strokeWidth=2;exitX=0.5;exitY=1.0;exitDx=0;exitDy=0;entryX=0.5;entryY=0.0;entryDx=0;entryDy=0;" edge="1" parent="1" source="client" target="web">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="web-core" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=0;endArrow=block;endFill=1;strokeColor=#667085;strokeWidth=2;exitX=0.5;exitY=1.0;exitDx=0;exitDy=0;entryX=0.43333333333333335;entryY=0.0;entryDx=0;entryDy=0;" edge="1" parent="1" source="web" target="core">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="web-client" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=0;endArrow=block;endFill=1;strokeColor=#667085;strokeWidth=2;exitX=1.0;exitY=0.42857142857142855;exitDx=0;exitDy=0;entryX=0.0;entryY=0.42857142857142855;entryDx=0;entryDy=0;" edge="1" parent="1" source="web" target="client-info">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="redirect" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=0;endArrow=block;endFill=1;strokeColor=#667085;strokeWidth=2;exitX=0.0;exitY=0.21428571428571427;exitDx=0;exitDy=0;entryX=1.0;entryY=0.21428571428571427;entryDx=0;entryDy=0;" edge="1" parent="1" source="web" target="payment">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="pay" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=0;endArrow=block;endFill=1;strokeColor=#667085;strokeWidth=2;exitX=0.0;exitY=0.631578947368421;exitDx=0;exitDy=0;entryX=0.5;entryY=1.0;entryDx=0;entryDy=0;" edge="1" parent="1" source="core" target="payment">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="980" y="680" />
+              <mxPoint x="980" y="450" />
+              <mxPoint x="170" y="450" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="partner-api" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=0;endArrow=block;endFill=1;strokeColor=#667085;strokeWidth=2;exitX=1.0;exitY=0.4;exitDx=0;exitDy=0;entryX=0.0;entryY=0.23684210526315788;entryDx=0;entryDy=0;" edge="1" parent="1" source="partners" target="core">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="360" y="600" />
+              <mxPoint x="360" y="505" />
+              <mxPoint x="1020" y="505" />
+              <mxPoint x="1020" y="605" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="core-client" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=0;endArrow=block;endFill=1;strokeColor=#667085;strokeWidth=2;exitX=1.0;exitY=0.21052631578947367;exitDx=0;exitDy=0;entryX=0.0;entryY=0.8214285714285714;entryDx=0;entryDy=0;" edge="1" parent="1" source="core" target="client-info">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1470" y="600" />
+              <mxPoint x="1470" y="385" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="client-sql" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=0;endArrow=block;endFill=1;strokeColor=#667085;strokeWidth=2;exitX=0.5;exitY=1.0;exitDx=0;exitDy=0;entryX=0.5;entryY=0.0;entryDx=0;entryDy=0;" edge="1" parent="1" source="client-info" target="client-db">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="core-sql" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=0;endArrow=block;endFill=1;strokeColor=#667085;strokeWidth=2;exitX=0.0;exitY=0.8421052631578947;exitDx=0;exitDy=0;entryX=1.0;entryY=0.8125;entryDx=0;entryDy=0;" edge="1" parent="1" source="core" target="core-db">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="individual-quote" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=0;endArrow=block;endFill=1;strokeColor=#667085;strokeWidth=2;exitX=0.06666666666666667;exitY=1.0;exitDx=0;exitDy=0;entryX=0.5;entryY=0.0;entryDx=0;entryDy=0;" edge="1" parent="1" source="core" target="aggregator">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1090" y="820" />
+              <mxPoint x="570" y="820" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="publish-policy" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=0;endArrow=block;endFill=1;strokeColor=#7442a5;strokeWidth=2;exitX=0.26666666666666666;exitY=1.0;exitDx=0;exitDy=0;entryX=0.35294117647058826;entryY=0.0;entryDx=0;entryDy=0;dashed=1;dashPattern=8 5;" edge="1" parent="1" source="core" target="kafka">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="consume-core" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=0;endArrow=block;endFill=1;strokeColor=#7442a5;strokeWidth=2;exitX=0.7058823529411765;exitY=0.0;exitDx=0;exitDy=0;entryX=0.6666666666666666;entryY=1.0;entryDx=0;entryDy=0;dashed=1;dashPattern=8 5;" edge="1" parent="1" source="kafka" target="core">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="publish-catalog" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=0;endArrow=block;endFill=1;strokeColor=#7442a5;strokeWidth=2;exitX=1.0;exitY=0.3888888888888889;exitDx=0;exitDy=0;entryX=0.0;entryY=0.3888888888888889;entryDx=0;entryDy=0;dashed=1;dashPattern=8 5;" edge="1" parent="1" source="aggregator" target="kafka">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="consume-settlement" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=0;endArrow=block;endFill=1;strokeColor=#7442a5;strokeWidth=2;exitX=1.0;exitY=0.4444444444444444;exitDx=0;exitDy=0;entryX=0.0;entryY=0.4444444444444444;entryDx=0;entryDy=0;dashed=1;dashPattern=8 5;" edge="1" parent="1" source="kafka" target="settlement">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="aggregator-sql" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=0;endArrow=block;endFill=1;strokeColor=#667085;strokeWidth=2;exitX=0.5;exitY=1.0;exitDx=0;exitDy=0;entryX=0.5;entryY=0.0;entryDx=0;entryDy=0;" edge="1" parent="1" source="aggregator" target="agg-db">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="settlement-sql" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=0;endArrow=block;endFill=1;strokeColor=#667085;strokeWidth=2;exitX=0.5;exitY=1.0;exitDx=0;exitDy=0;entryX=0.5;entryY=0.0;entryDx=0;entryDy=0;" edge="1" parent="1" source="settlement" target="settle-db">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="poll" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=0;endArrow=block;endFill=1;strokeColor=#667085;strokeWidth=2;exitX=0.0;exitY=0.5555555555555556;exitDx=0;exitDy=0;entryX=0.5357142857142857;entryY=1.0;entryDx=0;entryDy=0;" edge="1" parent="1" source="aggregator" target="insurers">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="365" y="1160" />
+              <mxPoint x="365" y="1580" />
+              <mxPoint x="2270" y="1580" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="send-registry" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=0;endArrow=block;endFill=1;strokeColor=#667085;strokeWidth=2;exitX=1.0;exitY=0.7222222222222222;exitDx=0;exitDy=0;entryX=0.0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="settlement" target="insurers">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="2070" y="1190" />
+              <mxPoint x="2070" y="990" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="client" value="&lt;b style=&quot;font-size:19px&quot;&gt;Клиент&lt;/b&gt;&lt;br&gt;&lt;span style=&quot;font-size:15px&quot;&gt;[Person]&lt;/span&gt;&lt;br&gt;&lt;br&gt;&lt;span style=&quot;font-size:16px&quot;&gt;Оформляет страховку&lt;/span&gt;" style="rounded=1;arcSize=10;whiteSpace=wrap;html=1;fillColor=#104a7d;strokeColor=#104a7d;fontColor=#ffffff;fontSize=17;spacing=12;" vertex="1" parent="1" c4Type="Person" c4Name="Клиент" sourceElementId="uZ0quFO-MIEIE11IO5jD-23">
+          <mxGeometry x="1070" y="90" width="260" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="web" value="&lt;b style=&quot;font-size:19px&quot;&gt;InsureTech Web&lt;/b&gt;&lt;br&gt;&lt;span style=&quot;font-size:15px&quot;&gt;[Container: JavaScript, React]&lt;/span&gt;&lt;br&gt;&lt;br&gt;&lt;span style=&quot;font-size:16px&quot;&gt;Веб-приложение&lt;/span&gt;" style="rounded=1;arcSize=10;whiteSpace=wrap;html=1;fillColor=#229dca;strokeColor=#229dca;fontColor=#ffffff;fontSize=17;spacing=12;" vertex="1" parent="1" c4Type="Container" c4Name="InsureTech Web" sourceElementId="uZ0quFO-MIEIE11IO5jD-4">
+          <mxGeometry x="1070" y="270" width="260" height="140" as="geometry" />
+        </mxCell>
+        <mxCell id="payment" value="&lt;b style=&quot;font-size:19px&quot;&gt;Платёжный сервис&lt;/b&gt;&lt;br&gt;&lt;span style=&quot;font-size:15px&quot;&gt;[Software System]&lt;/span&gt;&lt;br&gt;&lt;br&gt;&lt;span style=&quot;font-size:16px&quot;&gt;Оплата страховки на счёт&lt;br&gt;страховой компании&lt;/span&gt;" style="rounded=1;arcSize=10;whiteSpace=wrap;html=1;fillColor=#8b8497;strokeColor=#8b8497;fontColor=#ffffff;fontSize=17;spacing=12;" vertex="1" parent="1" c4Type="Software System" c4Name="Платёжный сервис" sourceElementId="uZ0quFO-MIEIE11IO5jD-36">
+          <mxGeometry x="30" y="270" width="280" height="140" as="geometry" />
+        </mxCell>
+        <mxCell id="partners" value="&lt;b style=&quot;font-size:19px&quot;&gt;Системы партнёров&lt;/b&gt;&lt;br&gt;&lt;span style=&quot;font-size:15px&quot;&gt;[Software System]&lt;/span&gt;&lt;br&gt;&lt;br&gt;&lt;span style=&quot;font-size:16px&quot;&gt;Интегрируют оформление&lt;br&gt;в собственные продукты&lt;/span&gt;" style="rounded=1;arcSize=10;whiteSpace=wrap;html=1;fillColor=#8b8497;strokeColor=#8b8497;fontColor=#ffffff;fontSize=17;spacing=12;" vertex="1" parent="1" c4Type="Software System" c4Name="Системы партнёров" sourceElementId="uZ0quFO-MIEIE11IO5jD-9">
+          <mxGeometry x="30" y="540" width="280" height="150" as="geometry" />
+        </mxCell>
+        <mxCell id="core" value="&lt;b style=&quot;font-size:19px&quot;&gt;core-app&lt;/b&gt;&lt;br&gt;&lt;span style=&quot;font-size:15px&quot;&gt;[Container: Kotlin, SpringBoot]&lt;/span&gt;&lt;br&gt;&lt;br&gt;&lt;span style=&quot;font-size:16px&quot;&gt;Продукты, оформление,&lt;br&gt;история полисов&lt;br&gt;Локальная копия каталога&lt;br&gt;Издатель outbox внутри сервиса&lt;/span&gt;" style="rounded=1;arcSize=10;whiteSpace=wrap;html=1;fillColor=#229dca;strokeColor=#229dca;fontColor=#ffffff;fontSize=17;spacing=12;" vertex="1" parent="1" c4Type="Container" c4Name="core-app" sourceElementId="uZ0quFO-MIEIE11IO5jD-3">
+          <mxGeometry x="1070" y="560" width="300" height="190" as="geometry" />
+        </mxCell>
+        <mxCell id="core-db" value="&lt;b style=&quot;font-size:19px&quot;&gt;core-db&lt;/b&gt;&lt;br&gt;&lt;span style=&quot;font-size:15px&quot;&gt;[Container: PostgreSQL schema]&lt;/span&gt;&lt;br&gt;&lt;br&gt;&lt;span style=&quot;font-size:16px&quot;&gt;Полисы и условия сделки&lt;br&gt;Копия каталога + inbox&lt;br&gt;Полис + outbox атомарно&lt;/span&gt;" style="rounded=1;arcSize=10;whiteSpace=wrap;html=1;fillColor=#229dca;strokeColor=#229dca;fontColor=#ffffff;fontSize=17;spacing=12;shape=cylinder3;size=15;boundedLbl=1;backgroundOutline=1;" vertex="1" parent="1" c4Type="Container" c4Name="core-db" sourceElementId="uZ0quFO-MIEIE11IO5jD-2">
+          <mxGeometry x="600" y="590" width="290" height="160" as="geometry" />
+        </mxCell>
+        <mxCell id="client-info" value="&lt;b style=&quot;font-size:19px&quot;&gt;client-info&lt;/b&gt;&lt;br&gt;&lt;span style=&quot;font-size:15px&quot;&gt;[Container: Kotlin, SpringBoot]&lt;/span&gt;&lt;br&gt;&lt;br&gt;&lt;span style=&quot;font-size:16px&quot;&gt;Чтение и изменение&lt;br&gt;клиентских данных&lt;/span&gt;" style="rounded=1;arcSize=10;whiteSpace=wrap;html=1;fillColor=#229dca;strokeColor=#229dca;fontColor=#ffffff;fontSize=17;spacing=12;" vertex="1" parent="1" c4Type="Container" c4Name="client-info" sourceElementId="ckVUTfoMV_SZnMC_Z-Nl-1">
+          <mxGeometry x="1660" y="270" width="320" height="140" as="geometry" />
+        </mxCell>
+        <mxCell id="client-db" value="&lt;b style=&quot;font-size:19px&quot;&gt;client-info-db&lt;/b&gt;&lt;br&gt;&lt;span style=&quot;font-size:15px&quot;&gt;[Container: PostgreSQL schema]&lt;/span&gt;&lt;br&gt;&lt;br&gt;&lt;span style=&quot;font-size:16px&quot;&gt;Клиентские данные&lt;br&gt;Отдельная схема client-info&lt;/span&gt;" style="rounded=1;arcSize=10;whiteSpace=wrap;html=1;fillColor=#229dca;strokeColor=#229dca;fontColor=#ffffff;fontSize=17;spacing=12;shape=cylinder3;size=15;boundedLbl=1;backgroundOutline=1;" vertex="1" parent="1" c4Type="Container" c4Name="client-info-db">
+          <mxGeometry x="1660" y="570" width="320" height="150" as="geometry" />
+        </mxCell>
+        <mxCell id="aggregator" value="&lt;b style=&quot;font-size:19px&quot;&gt;ins-product-aggregator&lt;/b&gt;&lt;br&gt;&lt;span style=&quot;font-size:15px&quot;&gt;[Container: Kotlin, SpringBoot]&lt;/span&gt;&lt;br&gt;&lt;br&gt;&lt;span style=&quot;font-size:16px&quot;&gt;Независимый опрос страховщиков&lt;br&gt;Нормализация каталога и тарифов&lt;br&gt;Планировщик и издатель outbox&lt;/span&gt;" style="rounded=1;arcSize=10;whiteSpace=wrap;html=1;fillColor=#229dca;strokeColor=#229dca;fontColor=#ffffff;fontSize=17;spacing=12;" vertex="1" parent="1" c4Type="Container" c4Name="ins-product-aggregator" sourceElementId="uZ0quFO-MIEIE11IO5jD-16">
+          <mxGeometry x="410" y="1060" width="320" height="180" as="geometry" />
+        </mxCell>
+        <mxCell id="kafka" value="&lt;b style=&quot;font-size:19px&quot;&gt;Apache Kafka&lt;/b&gt;&lt;br&gt;&lt;span style=&quot;font-size:15px&quot;&gt;[Container: Event Streaming]&lt;/span&gt;&lt;br&gt;&lt;br&gt;&lt;span style=&quot;font-size:16px&quot;&gt;T1: catalog.product-state.v1&lt;br&gt;T2: insurance.policy-state.v1&lt;br&gt;Повторное чтение событий&lt;/span&gt;" style="rounded=1;arcSize=10;whiteSpace=wrap;html=1;fillColor=#7442a5;strokeColor=#7442a5;fontColor=#ffffff;fontSize=17;spacing=12;" vertex="1" parent="1" c4Type="Container" c4Name="Apache Kafka">
+          <mxGeometry x="1030" y="1060" width="340" height="180" as="geometry" />
+        </mxCell>
+        <mxCell id="settlement" value="&lt;b style=&quot;font-size:19px&quot;&gt;ins-comp-settlement&lt;/b&gt;&lt;br&gt;&lt;span style=&quot;font-size:15px&quot;&gt;[Container: Kotlin, SpringBoot]&lt;/span&gt;&lt;br&gt;&lt;br&gt;&lt;span style=&quot;font-size:16px&quot;&gt;Копии каталога и полисов&lt;br&gt;Суточный реестр и сверка&lt;br&gt;Ежемесячные взаиморасчёты&lt;/span&gt;" style="rounded=1;arcSize=10;whiteSpace=wrap;html=1;fillColor=#229dca;strokeColor=#229dca;fontColor=#ffffff;fontSize=17;spacing=12;" vertex="1" parent="1" c4Type="Container" c4Name="ins-comp-settlement" sourceElementId="uZ0quFO-MIEIE11IO5jD-19">
+          <mxGeometry x="1670" y="1060" width="320" height="180" as="geometry" />
+        </mxCell>
+        <mxCell id="insurers" value="&lt;b style=&quot;font-size:19px&quot;&gt;Страховые компании&lt;/b&gt;&lt;br&gt;&lt;span style=&quot;font-size:15px&quot;&gt;[Software System]&lt;/span&gt;&lt;br&gt;&lt;br&gt;&lt;span style=&quot;font-size:16px&quot;&gt;Переход с 5 на 10 компаний&lt;br&gt;API продуктов и расчётов&lt;/span&gt;" style="rounded=1;arcSize=10;whiteSpace=wrap;html=1;fillColor=#8b8497;strokeColor=#8b8497;fontColor=#ffffff;fontSize=17;spacing=12;" vertex="1" parent="1" c4Type="Software System" c4Name="Страховые компании">
+          <mxGeometry x="2120" y="910" width="280" height="160" as="geometry" />
+        </mxCell>
+        <mxCell id="agg-db" value="&lt;b style=&quot;font-size:19px&quot;&gt;aggregator-db&lt;/b&gt;&lt;br&gt;&lt;span style=&quot;font-size:15px&quot;&gt;[Container: PostgreSQL schema]&lt;/span&gt;&lt;br&gt;&lt;br&gt;&lt;span style=&quot;font-size:16px&quot;&gt;Новая схема: каталог и версии&lt;br&gt;Статус опроса; каталог + outbox&lt;br&gt;в одной транзакции&lt;/span&gt;" style="rounded=1;arcSize=10;whiteSpace=wrap;html=1;fillColor=#229dca;strokeColor=#229dca;fontColor=#ffffff;fontSize=17;spacing=12;shape=cylinder3;size=15;boundedLbl=1;backgroundOutline=1;" vertex="1" parent="1" c4Type="Container" c4Name="aggregator-db">
+          <mxGeometry x="410" y="1350" width="320" height="150" as="geometry" />
+        </mxCell>
+        <mxCell id="settle-db" value="&lt;b style=&quot;font-size:19px&quot;&gt;ins-comp-settlement-db&lt;/b&gt;&lt;br&gt;&lt;span style=&quot;font-size:15px&quot;&gt;[Container: PostgreSQL schema]&lt;/span&gt;&lt;br&gt;&lt;br&gt;&lt;span style=&quot;font-size:16px&quot;&gt;Каталог, полисы, inbox, карантин&lt;br&gt;История версий, реестры&lt;br&gt;Задания отправки и сверки&lt;/span&gt;" style="rounded=1;arcSize=10;whiteSpace=wrap;html=1;fillColor=#229dca;strokeColor=#229dca;fontColor=#ffffff;fontSize=17;spacing=12;shape=cylinder3;size=15;boundedLbl=1;backgroundOutline=1;" vertex="1" parent="1" c4Type="Container" c4Name="ins-comp-settlement-db" sourceElementId="ckVUTfoMV_SZnMC_Z-Nl-2">
+          <mxGeometry x="1670" y="1350" width="320" height="150" as="geometry" />
+        </mxCell>
+        <mxCell id="use-label" value="Использует [HTTPS]" style="text;html=0;whiteSpace=wrap;fontSize=17;fillColor=#ffffff;strokeColor=none;align=center;" vertex="1" parent="1">
+          <mxGeometry x="1230.0" y="210.0" width="240" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="web-core-label" value="Продукты и оформление&#10;[REST / HTTPS]" style="text;html=0;whiteSpace=wrap;fontSize=17;fillColor=#ffffff;strokeColor=none;align=center;" vertex="1" parent="1">
+          <mxGeometry x="1070.0" y="454.0" width="260" height="52" as="geometry" />
+        </mxCell>
+        <mxCell id="web-client-label" value="Клиентские данные&#10;[REST / HTTPS]" style="text;html=0;whiteSpace=wrap;fontSize=17;fillColor=#ffffff;strokeColor=none;align=center;" vertex="1" parent="1">
+          <mxGeometry x="1375.0" y="274.0" width="240" height="52" as="geometry" />
+        </mxCell>
+        <mxCell id="redirect-label" value="Перенаправление на оплату [HTTPS]" style="text;html=0;whiteSpace=wrap;fontSize=17;fillColor=#ffffff;strokeColor=none;align=center;" vertex="1" parent="1">
+          <mxGeometry x="470.0" y="267.0" width="440" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="pay-label" value="Проведение оплаты [HTTPS]" style="text;html=0;whiteSpace=wrap;fontSize=17;fillColor=#ffffff;strokeColor=none;align=center;" vertex="1" parent="1">
+          <mxGeometry x="495.0" y="417.0" width="370" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="partner-api-label" value="Оформление полисов [REST / HTTPS]" style="text;html=0;whiteSpace=wrap;fontSize=17;fillColor=#ffffff;strokeColor=none;align=center;" vertex="1" parent="1">
+          <mxGeometry x="445.0" y="472.0" width="430" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="core-client-label" value="Клиентские данные&#10;[REST / HTTPS]" style="text;html=0;whiteSpace=wrap;fontSize=17;fillColor=#ffffff;strokeColor=none;align=center;" vertex="1" parent="1">
+          <mxGeometry x="1350.0" y="439.0" width="260" height="52" as="geometry" />
+        </mxCell>
+        <mxCell id="client-sql-label" value="Своя схема [SQL / TLS]" style="text;html=0;whiteSpace=wrap;fontSize=17;fillColor=#ffffff;strokeColor=none;align=center;" vertex="1" parent="1">
+          <mxGeometry x="1680.0" y="477.0" width="280" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="core-sql-label" value="SQL / TLS" style="text;html=0;whiteSpace=wrap;fontSize=17;fillColor=#ffffff;strokeColor=none;align=center;" vertex="1" parent="1">
+          <mxGeometry x="915.0" y="689.0" width="130" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="individual-quote-label" value="Индивидуальные предложения ОСАГО&#10;[REST; вне потока каталога]" style="text;html=0;whiteSpace=wrap;fontSize=17;fillColor=#ffffff;strokeColor=none;align=center;" vertex="1" parent="1">
+          <mxGeometry x="510.0" y="772.0" width="450" height="52" as="geometry" />
+        </mxCell>
+        <mxCell id="publish-policy-label" value="T2: PolicyStateChanged&#10;и PeriodCheckpoint&#10;[Kafka / TLS]" style="text;html=0;whiteSpace=wrap;fontSize=17;fillColor=#ffffff;strokeColor=none;align=center;" vertex="1" parent="1">
+          <mxGeometry x="870.0" y="853.0" width="260" height="74" as="geometry" />
+        </mxCell>
+        <mxCell id="consume-core-label" value="T1: каталог и свежесть&#10;Группа core-catalog&#10;[Kafka / TLS]" style="text;html=0;whiteSpace=wrap;fontSize=17;fillColor=#ffffff;strokeColor=none;align=center;" vertex="1" parent="1">
+          <mxGeometry x="1290.0" y="873.0" width="280" height="74" as="geometry" />
+        </mxCell>
+        <mxCell id="publish-catalog-label" value="T1: каталог и свежесть&#10;[Kafka / TLS]" style="text;html=0;whiteSpace=wrap;fontSize=17;fillColor=#ffffff;strokeColor=none;align=center;" vertex="1" parent="1">
+          <mxGeometry x="740.0" y="1068.0" width="280" height="52" as="geometry" />
+        </mxCell>
+        <mxCell id="consume-settlement-label" value="T1 и T2 [Kafka / TLS]&#10;Группы: settlement-catalog&#10;и settlement-policies" style="text;html=0;whiteSpace=wrap;fontSize=17;fillColor=#ffffff;strokeColor=none;align=center;" vertex="1" parent="1">
+          <mxGeometry x="1375.0" y="1048.0" width="290" height="74" as="geometry" />
+        </mxCell>
+        <mxCell id="aggregator-sql-label" value="Своя схема [SQL / TLS]" style="text;html=0;whiteSpace=wrap;fontSize=17;fillColor=#ffffff;strokeColor=none;align=center;" vertex="1" parent="1">
+          <mxGeometry x="430.0" y="1283.0" width="280" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="settlement-sql-label" value="Своя схема [SQL / TLS]" style="text;html=0;whiteSpace=wrap;fontSize=17;fillColor=#ffffff;strokeColor=none;align=center;" vertex="1" parent="1">
+          <mxGeometry x="1690.0" y="1283.0" width="280" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="poll-label" value="Независимый опрос продуктов и тарифов; тайм-ауты и повторы по компании [REST / SOAP / GraphQL, TLS]" style="text;html=0;whiteSpace=wrap;fontSize=17;fillColor=#ffffff;strokeColor=none;align=center;" vertex="1" parent="1">
+          <mxGeometry x="480.0" y="1545.0" width="1580" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="send-registry-label" value="Отправка реестра&#10;раз в месяц&#10;[API / TLS]" style="text;html=0;whiteSpace=wrap;fontSize=17;fillColor=#ffffff;strokeColor=none;align=center;" vertex="1" parent="1">
+          <mxGeometry x="1995.0" y="1223.0" width="250" height="74" as="geometry" />
+        </mxCell>
+        <mxCell id="note0" value="Связи&#10;&#10;Серая: API / SQL&#10;Фиолетовая: события&#10;TLS: шифрование канала" style="rounded=1;whiteSpace=wrap;html=0;fillColor=#f3f5f9;strokeColor=#d0d5dd;fontSize=17;spacing=12;" vertex="1" parent="1">
+          <mxGeometry x="40" y="1670" width="280" height="125" as="geometry" />
+        </mxCell>
+        <mxCell id="note1" value="Надёжная доставка&#10;&#10;Outbox: бизнес-запись и событие фиксируются вместе.&#10;Доставка как минимум один раз; eventId + версия,&#10;запись проекции и inbox до подтверждения offset." style="rounded=1;whiteSpace=wrap;html=0;fillColor=#f3f5f9;strokeColor=#d0d5dd;fontSize=17;spacing=12;" vertex="1" parent="1">
+          <mxGeometry x="360" y="1670" width="520" height="125" as="geometry" />
+        </mxCell>
+        <mxCell id="note2" value="Согласованность реестра&#10;&#10;Оформление ≠ заявка или платёжный redirect.&#10;Условия полиса фиксируются на момент сделки.&#10;Закрытие периода: маркеры, сверка, карантин пуст." style="rounded=1;whiteSpace=wrap;html=0;fillColor=#f3f5f9;strokeColor=#d0d5dd;fontSize=17;spacing=12;" vertex="1" parent="1">
+          <mxGeometry x="920" y="1670" width="520" height="125" as="geometry" />
+        </mxCell>
+        <mxCell id="note3" value="Уровень C4: контейнеры&#10;&#10;Все схемы БД — один логический PostgreSQL из Task1.&#10;Kafka — новая инфраструктура, не бизнес-сервис.&#10;Физическое размещение и восстановление — см. README." style="rounded=1;whiteSpace=wrap;html=0;fillColor=#f3f5f9;strokeColor=#d0d5dd;fontSize=17;spacing=12;" vertex="1" parent="1">
+          <mxGeometry x="1480" y="1670" width="560" height="125" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
