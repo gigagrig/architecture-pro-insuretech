@@ -1,0 +1,2 @@
+NAME               STATUS   ROLES           AGE   VERSION   INTERNAL-IP    EXTERNAL-IP   OS-IMAGE                         KERNEL-VERSION      CONTAINER-RUNTIME
+insuretech-task2   Ready    control-plane   20m   v1.35.1   192.168.58.2   <none>        Debian GNU/Linux 12 (bookworm)   6.17.0-41-generic   docker://29.2.1

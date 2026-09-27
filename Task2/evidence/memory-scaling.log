@@ -1,0 +1,323 @@
+2026-09-27T19:38:55Z
+NAME           REFERENCE                 TARGETS                 MINPODS   MAXPODS   REPLICAS   AGE
+scaletestapp   Deployment/scaletestapp   memory: <unknown>/80%   1         10        0          0s
+NAME           READY   UP-TO-DATE   AVAILABLE   AGE
+scaletestapp   1/1     1            1           20m
+error: metrics not available yet
+NAME                            READY   STATUS    RESTARTS   AGE
+scaletestapp-59dd856cd7-lgjlp   1/1     Running   0          47s
+2026-09-27T19:39:11Z
+NAME           REFERENCE                 TARGETS           MINPODS   MAXPODS   REPLICAS   AGE
+scaletestapp   Deployment/scaletestapp   memory: 31%/80%   1         10        1          16s
+NAME           READY   UP-TO-DATE   AVAILABLE   AGE
+scaletestapp   1/1     1            1           20m
+NAME                            CPU(cores)   MEMORY(bytes)   
+scaletestapp-59dd856cd7-lgjlp   1m           3Mi             
+NAME                            READY   STATUS    RESTARTS   AGE
+scaletestapp-59dd856cd7-lgjlp   1/1     Running   0          62s
+2026-09-27T19:39:26Z
+NAME           REFERENCE                 TARGETS           MINPODS   MAXPODS   REPLICAS   AGE
+scaletestapp   Deployment/scaletestapp   memory: 31%/80%   1         10        1          31s
+NAME           READY   UP-TO-DATE   AVAILABLE   AGE
+scaletestapp   1/1     1            1           21m
+NAME                            CPU(cores)   MEMORY(bytes)   
+scaletestapp-59dd856cd7-lgjlp   1m           3Mi             
+NAME                            READY   STATUS    RESTARTS   AGE
+scaletestapp-59dd856cd7-lgjlp   1/1     Running   0          77s
+2026-09-27T19:39:41Z
+NAME           REFERENCE                 TARGETS           MINPODS   MAXPODS   REPLICAS   AGE
+scaletestapp   Deployment/scaletestapp   memory: 31%/80%   1         10        1          46s
+NAME           READY   UP-TO-DATE   AVAILABLE   AGE
+scaletestapp   1/1     1            1           21m
+NAME                            CPU(cores)   MEMORY(bytes)   
+scaletestapp-59dd856cd7-lgjlp   1m           3Mi             
+NAME                            READY   STATUS    RESTARTS   AGE
+scaletestapp-59dd856cd7-lgjlp   1/1     Running   0          92s
+2026-09-27T19:39:56Z
+NAME           REFERENCE                 TARGETS           MINPODS   MAXPODS   REPLICAS   AGE
+scaletestapp   Deployment/scaletestapp   memory: 31%/80%   1         10        1          61s
+NAME           READY   UP-TO-DATE   AVAILABLE   AGE
+scaletestapp   1/1     1            1           21m
+NAME                            CPU(cores)   MEMORY(bytes)   
+scaletestapp-59dd856cd7-lgjlp   1m           3Mi             
+NAME                            READY   STATUS    RESTARTS   AGE
+scaletestapp-59dd856cd7-lgjlp   1/1     Running   0          108s
+2026-09-27T19:40:12Z
+NAME           REFERENCE                 TARGETS           MINPODS   MAXPODS   REPLICAS   AGE
+scaletestapp   Deployment/scaletestapp   memory: 63%/80%   1         10        1          77s
+NAME           READY   UP-TO-DATE   AVAILABLE   AGE
+scaletestapp   1/1     1            1           21m
+NAME                            CPU(cores)   MEMORY(bytes)   
+scaletestapp-59dd856cd7-lgjlp   3m           7Mi             
+NAME                            READY   STATUS    RESTARTS   AGE
+scaletestapp-59dd856cd7-lgjlp   1/1     Running   0          2m3s
+2026-09-27T19:40:27Z
+NAME           REFERENCE                 TARGETS           MINPODS   MAXPODS   REPLICAS   AGE
+scaletestapp   Deployment/scaletestapp   memory: 63%/80%   1         10        1          92s
+NAME           READY   UP-TO-DATE   AVAILABLE   AGE
+scaletestapp   1/1     1            1           22m
+NAME                            CPU(cores)   MEMORY(bytes)   
+scaletestapp-59dd856cd7-lgjlp   3m           7Mi             
+NAME                            READY   STATUS    RESTARTS   AGE
+scaletestapp-59dd856cd7-lgjlp   1/1     Running   0          2m18s
+2026-09-27T19:40:42Z
+NAME           REFERENCE                 TARGETS           MINPODS   MAXPODS   REPLICAS   AGE
+scaletestapp   Deployment/scaletestapp   memory: 63%/80%   1         10        1          107s
+NAME           READY   UP-TO-DATE   AVAILABLE   AGE
+scaletestapp   1/1     1            1           22m
+NAME                            CPU(cores)   MEMORY(bytes)   
+scaletestapp-59dd856cd7-lgjlp   3m           7Mi             
+NAME                            READY   STATUS    RESTARTS   AGE
+scaletestapp-59dd856cd7-lgjlp   1/1     Running   0          2m34s
+2026-09-27T19:40:58Z
+NAME           REFERENCE                 TARGETS           MINPODS   MAXPODS   REPLICAS   AGE
+scaletestapp   Deployment/scaletestapp   memory: 63%/80%   1         10        1          2m3s
+NAME           READY   UP-TO-DATE   AVAILABLE   AGE
+scaletestapp   1/1     1            1           22m
+NAME                            CPU(cores)   MEMORY(bytes)   
+scaletestapp-59dd856cd7-lgjlp   3m           7Mi             
+NAME                            READY   STATUS    RESTARTS   AGE
+scaletestapp-59dd856cd7-lgjlp   1/1     Running   0          2m49s
+2026-09-27T19:41:13Z
+NAME           REFERENCE                 TARGETS           MINPODS   MAXPODS   REPLICAS   AGE
+scaletestapp   Deployment/scaletestapp   memory: 68%/80%   1         10        1          2m18s
+NAME           READY   UP-TO-DATE   AVAILABLE   AGE
+scaletestapp   1/1     1            1           22m
+NAME                            CPU(cores)   MEMORY(bytes)   
+scaletestapp-59dd856cd7-lgjlp   167m         8Mi             
+NAME                            READY   STATUS    RESTARTS   AGE
+scaletestapp-59dd856cd7-lgjlp   1/1     Running   0          3m4s
+2026-09-27T19:41:28Z
+NAME           REFERENCE                 TARGETS           MINPODS   MAXPODS   REPLICAS   AGE
+scaletestapp   Deployment/scaletestapp   memory: 68%/80%   1         10        1          2m34s
+NAME           READY   UP-TO-DATE   AVAILABLE   AGE
+scaletestapp   1/1     1            1           23m
+NAME                            CPU(cores)   MEMORY(bytes)   
+scaletestapp-59dd856cd7-lgjlp   167m         8Mi             
+NAME                            READY   STATUS    RESTARTS   AGE
+scaletestapp-59dd856cd7-lgjlp   1/1     Running   0          3m20s
+2026-09-27T19:41:44Z
+NAME           REFERENCE                 TARGETS           MINPODS   MAXPODS   REPLICAS   AGE
+scaletestapp   Deployment/scaletestapp   memory: 68%/80%   1         10        1          2m49s
+NAME           READY   UP-TO-DATE   AVAILABLE   AGE
+scaletestapp   1/1     1            1           23m
+NAME                            CPU(cores)   MEMORY(bytes)   
+scaletestapp-59dd856cd7-lgjlp   167m         8Mi             
+NAME                            READY   STATUS    RESTARTS   AGE
+scaletestapp-59dd856cd7-lgjlp   1/1     Running   0          3m35s
+2026-09-27T19:41:59Z
+NAME           REFERENCE                 TARGETS           MINPODS   MAXPODS   REPLICAS   AGE
+scaletestapp   Deployment/scaletestapp   memory: 68%/80%   1         10        1          3m4s
+NAME           READY   UP-TO-DATE   AVAILABLE   AGE
+scaletestapp   1/1     1            1           23m
+NAME                            CPU(cores)   MEMORY(bytes)   
+scaletestapp-59dd856cd7-lgjlp   167m         8Mi             
+NAME                            READY   STATUS    RESTARTS   AGE
+scaletestapp-59dd856cd7-lgjlp   1/1     Running   0          3m50s
+2026-09-27T19:42:14Z
+NAME           REFERENCE                 TARGETS           MINPODS   MAXPODS   REPLICAS   AGE
+scaletestapp   Deployment/scaletestapp   memory: 67%/80%   1         10        1          3m19s
+NAME           READY   UP-TO-DATE   AVAILABLE   AGE
+scaletestapp   1/1     1            1           23m
+NAME                            CPU(cores)   MEMORY(bytes)   
+scaletestapp-59dd856cd7-lgjlp   187m         8Mi             
+NAME                            READY   STATUS    RESTARTS   AGE
+scaletestapp-59dd856cd7-lgjlp   1/1     Running   0          4m5s
+2026-09-27T19:42:29Z
+NAME           REFERENCE                 TARGETS           MINPODS   MAXPODS   REPLICAS   AGE
+scaletestapp   Deployment/scaletestapp   memory: 67%/80%   1         10        1          3m34s
+NAME           READY   UP-TO-DATE   AVAILABLE   AGE
+scaletestapp   1/1     1            1           24m
+NAME                            CPU(cores)   MEMORY(bytes)   
+scaletestapp-59dd856cd7-lgjlp   187m         8Mi             
+NAME                            READY   STATUS    RESTARTS   AGE
+scaletestapp-59dd856cd7-lgjlp   1/1     Running   0          4m21s
+2026-09-27T19:42:45Z
+NAME           REFERENCE                 TARGETS           MINPODS   MAXPODS   REPLICAS   AGE
+scaletestapp   Deployment/scaletestapp   memory: 67%/80%   1         10        1          3m50s
+NAME           READY   UP-TO-DATE   AVAILABLE   AGE
+scaletestapp   1/1     1            1           24m
+NAME                            CPU(cores)   MEMORY(bytes)   
+scaletestapp-59dd856cd7-lgjlp   187m         8Mi             
+NAME                            READY   STATUS    RESTARTS   AGE
+scaletestapp-59dd856cd7-lgjlp   1/1     Running   0          4m36s
+2026-09-27T19:43:00Z
+NAME           REFERENCE                 TARGETS           MINPODS   MAXPODS   REPLICAS   AGE
+scaletestapp   Deployment/scaletestapp   memory: 67%/80%   1         10        1          4m5s
+NAME           READY   UP-TO-DATE   AVAILABLE   AGE
+scaletestapp   1/1     1            1           24m
+NAME                            CPU(cores)   MEMORY(bytes)   
+scaletestapp-59dd856cd7-lgjlp   183m         8Mi             
+NAME                            READY   STATUS    RESTARTS   AGE
+scaletestapp-59dd856cd7-lgjlp   1/1     Running   0          4m51s
+2026-09-27T19:43:15Z
+NAME           REFERENCE                 TARGETS           MINPODS   MAXPODS   REPLICAS   AGE
+scaletestapp   Deployment/scaletestapp   memory: 70%/80%   1         10        1          4m20s
+NAME           READY   UP-TO-DATE   AVAILABLE   AGE
+scaletestapp   1/1     1            1           24m
+NAME                            CPU(cores)   MEMORY(bytes)   
+scaletestapp-59dd856cd7-lgjlp   183m         8Mi             
+NAME                            READY   STATUS    RESTARTS   AGE
+scaletestapp-59dd856cd7-lgjlp   1/1     Running   0          5m6s
+2026-09-27T19:43:30Z
+NAME           REFERENCE                 TARGETS           MINPODS   MAXPODS   REPLICAS   AGE
+scaletestapp   Deployment/scaletestapp   memory: 70%/80%   1         10        1          4m36s
+NAME           READY   UP-TO-DATE   AVAILABLE   AGE
+scaletestapp   1/1     1            1           25m
+NAME                            CPU(cores)   MEMORY(bytes)   
+scaletestapp-59dd856cd7-lgjlp   183m         8Mi             
+NAME                            READY   STATUS    RESTARTS   AGE
+scaletestapp-59dd856cd7-lgjlp   1/1     Running   0          5m22s
+2026-09-27T19:43:46Z
+NAME           REFERENCE                 TARGETS           MINPODS   MAXPODS   REPLICAS   AGE
+scaletestapp   Deployment/scaletestapp   memory: 70%/80%   1         10        1          4m51s
+NAME           READY   UP-TO-DATE   AVAILABLE   AGE
+scaletestapp   1/1     1            1           25m
+NAME                            CPU(cores)   MEMORY(bytes)   
+scaletestapp-59dd856cd7-lgjlp   183m         8Mi             
+NAME                            READY   STATUS    RESTARTS   AGE
+scaletestapp-59dd856cd7-lgjlp   1/1     Running   0          5m37s
+2026-09-27T19:44:01Z
+NAME           REFERENCE                 TARGETS           MINPODS   MAXPODS   REPLICAS   AGE
+scaletestapp   Deployment/scaletestapp   memory: 70%/80%   1         10        1          5m6s
+NAME           READY   UP-TO-DATE   AVAILABLE   AGE
+scaletestapp   1/1     1            1           25m
+NAME                            CPU(cores)   MEMORY(bytes)   
+scaletestapp-59dd856cd7-lgjlp   170m         10Mi            
+NAME                            READY   STATUS    RESTARTS   AGE
+scaletestapp-59dd856cd7-lgjlp   1/1     Running   0          5m53s
+2026-09-27T19:44:17Z
+NAME           REFERENCE                 TARGETS           MINPODS   MAXPODS   REPLICAS   AGE
+scaletestapp   Deployment/scaletestapp   memory: 85%/80%   1         10        1          5m22s
+NAME           READY   UP-TO-DATE   AVAILABLE   AGE
+scaletestapp   1/1     1            1           25m
+NAME                            CPU(cores)   MEMORY(bytes)   
+scaletestapp-59dd856cd7-lgjlp   170m         10Mi            
+NAME                            READY   STATUS    RESTARTS   AGE
+scaletestapp-59dd856cd7-lgjlp   1/1     Running   0          6m8s
+2026-09-27T19:44:32Z
+NAME           REFERENCE                 TARGETS           MINPODS   MAXPODS   REPLICAS   AGE
+scaletestapp   Deployment/scaletestapp   memory: 85%/80%   1         10        1          5m37s
+NAME           READY   UP-TO-DATE   AVAILABLE   AGE
+scaletestapp   1/1     1            1           26m
+NAME                            CPU(cores)   MEMORY(bytes)   
+scaletestapp-59dd856cd7-lgjlp   170m         10Mi            
+NAME                            READY   STATUS    RESTARTS   AGE
+scaletestapp-59dd856cd7-lgjlp   1/1     Running   0          6m23s
+2026-09-27T19:44:47Z
+NAME           REFERENCE                 TARGETS           MINPODS   MAXPODS   REPLICAS   AGE
+scaletestapp   Deployment/scaletestapp   memory: 85%/80%   1         10        1          5m52s
+NAME           READY   UP-TO-DATE   AVAILABLE   AGE
+scaletestapp   1/1     1            1           26m
+NAME                            CPU(cores)   MEMORY(bytes)   
+scaletestapp-59dd856cd7-lgjlp   170m         10Mi            
+NAME                            READY   STATUS    RESTARTS   AGE
+scaletestapp-59dd856cd7-lgjlp   1/1     Running   0          6m38s
+2026-09-27T19:45:02Z
+NAME           REFERENCE                 TARGETS           MINPODS   MAXPODS   REPLICAS   AGE
+scaletestapp   Deployment/scaletestapp   memory: 85%/80%   1         10        1          6m8s
+NAME           READY   UP-TO-DATE   AVAILABLE   AGE
+scaletestapp   1/1     1            1           26m
+NAME                            CPU(cores)   MEMORY(bytes)   
+scaletestapp-59dd856cd7-lgjlp   1m           10Mi            
+NAME                            READY   STATUS    RESTARTS   AGE
+scaletestapp-59dd856cd7-lgjlp   1/1     Running   0          6m54s
+2026-09-27T19:45:18Z
+NAME           REFERENCE                 TARGETS           MINPODS   MAXPODS   REPLICAS   AGE
+scaletestapp   Deployment/scaletestapp   memory: 88%/80%   1         10        1          6m23s
+NAME           READY   UP-TO-DATE   AVAILABLE   AGE
+scaletestapp   1/1     1            1           27m
+NAME                            CPU(cores)   MEMORY(bytes)   
+scaletestapp-59dd856cd7-lgjlp   1m           10Mi            
+NAME                            READY   STATUS    RESTARTS   AGE
+scaletestapp-59dd856cd7-lgjlp   1/1     Running   0          7m9s
+2026-09-27T19:45:33Z
+NAME           REFERENCE                 TARGETS           MINPODS   MAXPODS   REPLICAS   AGE
+scaletestapp   Deployment/scaletestapp   memory: 88%/80%   1         10        1          6m38s
+NAME           READY   UP-TO-DATE   AVAILABLE   AGE
+scaletestapp   1/1     1            1           27m
+NAME                            CPU(cores)   MEMORY(bytes)   
+scaletestapp-59dd856cd7-lgjlp   1m           10Mi            
+NAME                            READY   STATUS    RESTARTS   AGE
+scaletestapp-59dd856cd7-lgjlp   1/1     Running   0          7m24s
+2026-09-27T19:45:48Z
+NAME           REFERENCE                 TARGETS           MINPODS   MAXPODS   REPLICAS   AGE
+scaletestapp   Deployment/scaletestapp   memory: 88%/80%   1         10        1          6m53s
+NAME           READY   UP-TO-DATE   AVAILABLE   AGE
+scaletestapp   1/1     1            1           27m
+NAME                            CPU(cores)   MEMORY(bytes)   
+scaletestapp-59dd856cd7-lgjlp   1m           10Mi            
+NAME                            READY   STATUS    RESTARTS   AGE
+scaletestapp-59dd856cd7-lgjlp   1/1     Running   0          7m40s
+2026-09-27T19:46:04Z
+NAME           REFERENCE                 TARGETS           MINPODS   MAXPODS   REPLICAS   AGE
+scaletestapp   Deployment/scaletestapp   memory: 88%/80%   1         10        1          7m9s
+NAME           READY   UP-TO-DATE   AVAILABLE   AGE
+scaletestapp   1/1     1            1           27m
+NAME                            CPU(cores)   MEMORY(bytes)   
+scaletestapp-59dd856cd7-lgjlp   1m           11Mi            
+NAME                            READY   STATUS    RESTARTS   AGE
+scaletestapp-59dd856cd7-lgjlp   1/1     Running   0          7m55s
+2026-09-27T19:46:19Z
+NAME           REFERENCE                 TARGETS           MINPODS   MAXPODS   REPLICAS   AGE
+scaletestapp   Deployment/scaletestapp   memory: 95%/80%   1         10        1          7m24s
+NAME           READY   UP-TO-DATE   AVAILABLE   AGE
+scaletestapp   2/2     2            2           28m
+NAME                            CPU(cores)   MEMORY(bytes)   
+scaletestapp-59dd856cd7-lgjlp   1m           11Mi            
+NAME                            READY   STATUS    RESTARTS   AGE
+scaletestapp-59dd856cd7-lgjlp   1/1     Running   0          8m10s
+scaletestapp-59dd856cd7-zdqbw   1/1     Running   0          8s
+2026-09-27T19:46:34Z
+NAME           REFERENCE                 TARGETS           MINPODS   MAXPODS   REPLICAS   AGE
+scaletestapp   Deployment/scaletestapp   memory: 95%/80%   1         10        2          7m39s
+NAME           READY   UP-TO-DATE   AVAILABLE   AGE
+scaletestapp   2/2     2            2           28m
+NAME                            CPU(cores)   MEMORY(bytes)   
+scaletestapp-59dd856cd7-lgjlp   1m           11Mi            
+NAME                            READY   STATUS    RESTARTS   AGE
+scaletestapp-59dd856cd7-lgjlp   1/1     Running   0          8m25s
+scaletestapp-59dd856cd7-zdqbw   1/1     Running   0          23s
+2026-09-27T19:46:49Z
+NAME           REFERENCE                 TARGETS           MINPODS   MAXPODS   REPLICAS   AGE
+scaletestapp   Deployment/scaletestapp   memory: 95%/80%   1         10        2          7m54s
+NAME           READY   UP-TO-DATE   AVAILABLE   AGE
+scaletestapp   2/2     2            2           28m
+NAME                            CPU(cores)   MEMORY(bytes)   
+scaletestapp-59dd856cd7-lgjlp   1m           11Mi            
+NAME                            READY   STATUS    RESTARTS   AGE
+scaletestapp-59dd856cd7-lgjlp   1/1     Running   0          8m40s
+scaletestapp-59dd856cd7-zdqbw   1/1     Running   0          38s
+Name:                                                     scaletestapp
+Namespace:                                                task2
+Labels:                                                   <none>
+Annotations:                                              <none>
+CreationTimestamp:                                        Sun, 27 Sep 2026 22:38:55 +0300
+Reference:                                                Deployment/scaletestapp
+Metrics:                                                  ( current / target )
+  resource memory on pods  (as a percentage of request):  95% (11684Ki) / 80%
+Min replicas:                                             1
+Max replicas:                                             10
+Behavior:
+  Scale Up:
+    Stabilization Window: 0 seconds
+    Select Policy: Max
+    Policies:
+      - Type: Pods     Value: 4    Period: 15 seconds
+      - Type: Percent  Value: 100  Period: 15 seconds
+  Scale Down:
+    Stabilization Window: 60 seconds
+    Select Policy: Max
+    Policies:
+      - Type: Percent  Value: 100  Period: 15 seconds
+Deployment pods:       2 current / 2 desired
+Conditions:
+  Type            Status  Reason              Message
+  ----            ------  ------              -------
+  AbleToScale     True    ReadyForNewScale    recommended size matches current size
+  ScalingActive   True    ValidMetricFound    the HPA was able to successfully calculate a replica count from memory resource utilization (percentage of request)
+  ScalingLimited  False   DesiredWithinRange  the desired count is within the acceptable range
+Events:
+  Type    Reason             Age   From                       Message
+  ----    ------             ----  ----                       -------
+  Normal  SuccessfulRescale  54s   horizontal-pod-autoscaler  New size: 2; reason: memory resource utilization (percentage of request) above target

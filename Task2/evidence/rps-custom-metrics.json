@@ -1,0 +1,43 @@
+{
+  "kind": "MetricValueList",
+  "apiVersion": "custom.metrics.k8s.io/v1beta1",
+  "metadata": {},
+  "items": [
+    {
+      "describedObject": {
+        "kind": "Pod",
+        "namespace": "task2",
+        "name": "scaletestapp-59dd856cd7-5htzt",
+        "apiVersion": "/v1"
+      },
+      "metricName": "http_requests_per_second",
+      "timestamp": "2026-09-27T19:53:38Z",
+      "value": "11503m",
+      "selector": null
+    },
+    {
+      "describedObject": {
+        "kind": "Pod",
+        "namespace": "task2",
+        "name": "scaletestapp-59dd856cd7-jpqsj",
+        "apiVersion": "/v1"
+      },
+      "metricName": "http_requests_per_second",
+      "timestamp": "2026-09-27T19:53:38Z",
+      "value": "4175m",
+      "selector": null
+    },
+    {
+      "describedObject": {
+        "kind": "Pod",
+        "namespace": "task2",
+        "name": "scaletestapp-59dd856cd7-lgjlp",
+        "apiVersion": "/v1"
+      },
+      "metricName": "http_requests_per_second",
+      "timestamp": "2026-09-27T19:53:38Z",
+      "value": "26644m",
+      "selector": null
+    }
+  ]
+}

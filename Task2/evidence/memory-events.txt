@@ -1,0 +1,100 @@
+LAST SEEN   TYPE      REASON                         OBJECT                                                  MESSAGE
+28m         Normal    ScalingReplicaSet              deployment/scaletestapp                                 Scaled up replica set scaletestapp-6c4bd669b4 from 0 to 1
+28m         Normal    SuccessfulCreate               replicaset/prometheus-c5b794f56                         Created pod: prometheus-c5b794f56-5v6m6
+28m         Normal    ScalingReplicaSet              deployment/prometheus                                   Scaled up replica set prometheus-c5b794f56 from 0 to 1
+28m         Normal    Scheduled                      pod/prometheus-c5b794f56-5v6m6                          Successfully assigned task2/prometheus-c5b794f56-5v6m6 to insuretech-task2
+28m         Normal    SuccessfulCreate               replicaset/scaletestapp-6c4bd669b4                      Created pod: scaletestapp-6c4bd669b4-686wn
+28m         Normal    Scheduled                      pod/scaletestapp-6c4bd669b4-686wn                       Successfully assigned task2/scaletestapp-6c4bd669b4-686wn to insuretech-task2
+28m         Normal    Pulling                        pod/prometheus-c5b794f56-5v6m6                          Pulling image "prom/prometheus:v3.2.1"
+28m         Normal    Pulled                         pod/prometheus-c5b794f56-5v6m6                          Successfully pulled image "prom/prometheus:v3.2.1" in 22.422s (23.616s including waiting). Image size: 289268919 bytes.
+28m         Normal    Created                        pod/prometheus-c5b794f56-5v6m6                          Container created
+28m         Normal    Started                        pod/prometheus-c5b794f56-5v6m6                          Container started
+27m         Normal    SuccessfulCreate               replicaset/task2-adapter-prometheus-adapter-5ffb598fd   Created pod: task2-adapter-prometheus-adapter-5ffb598fd-f7q6w
+27m         Normal    Scheduled                      pod/task2-adapter-prometheus-adapter-5ffb598fd-f7q6w    Successfully assigned task2/task2-adapter-prometheus-adapter-5ffb598fd-f7q6w to insuretech-task2
+27m         Normal    ScalingReplicaSet              deployment/task2-adapter-prometheus-adapter             Scaled up replica set task2-adapter-prometheus-adapter-5ffb598fd from 0 to 1
+27m         Normal    Pulling                        pod/task2-adapter-prometheus-adapter-5ffb598fd-f7q6w    Pulling image "registry.k8s.io/prometheus-adapter/prometheus-adapter:v0.12.0"
+27m         Normal    Pulling                        pod/scaletestapp-6c4bd669b4-686wn                       Pulling image "ghcr.io/yandex-practicum/scaletestapp:latest"
+27m         Normal    Created                        pod/task2-adapter-prometheus-adapter-5ffb598fd-f7q6w    Container created
+27m         Normal    Pulled                         pod/task2-adapter-prometheus-adapter-5ffb598fd-f7q6w    Successfully pulled image "registry.k8s.io/prometheus-adapter/prometheus-adapter:v0.12.0" in 6.766s (6.766s including waiting). Image size: 86771663 bytes.
+27m         Normal    Started                        pod/task2-adapter-prometheus-adapter-5ffb598fd-f7q6w    Container started
+26m         Warning   Failed                         pod/scaletestapp-6c4bd669b4-686wn                       Error: ErrImagePull
+26m         Warning   Failed                         pod/scaletestapp-6c4bd669b4-686wn                       Failed to pull image "ghcr.io/yandex-practicum/scaletestapp:latest": no matching manifest for linux/arm64/v8 in the manifest list entries
+26m         Warning   Failed                         pod/scaletestapp-6c4bd669b4-686wn                       Error: ImagePullBackOff
+26m         Normal    BackOff                        pod/scaletestapp-6c4bd669b4-686wn                       Back-off pulling image "ghcr.io/yandex-practicum/scaletestapp:latest"
+25m         Normal    ScalingReplicaSet              deployment/scaletestapp                                 Scaled up replica set scaletestapp-68ddcb47df from 0 to 1
+25m         Normal    SuccessfulCreate               replicaset/scaletestapp-68ddcb47df                      Created pod: scaletestapp-68ddcb47df-tkjd7
+25m         Normal    Scheduled                      pod/scaletestapp-68ddcb47df-tkjd7                       Successfully assigned task2/scaletestapp-68ddcb47df-tkjd7 to insuretech-task2
+25m         Normal    Started                        pod/scaletestapp-68ddcb47df-tkjd7                       Container started
+25m         Normal    Created                        pod/scaletestapp-68ddcb47df-tkjd7                       Container created
+25m         Normal    Pulled                         pod/scaletestapp-68ddcb47df-tkjd7                       Container image "scaletestapp:task2-f36911e" already present on machine and can be accessed by the pod
+25m         Normal    ScalingReplicaSet              deployment/scaletestapp                                 Scaled down replica set scaletestapp-6c4bd669b4 from 1 to 0
+25m         Normal    SuccessfulDelete               replicaset/scaletestapp-6c4bd669b4                      Deleted pod: scaletestapp-6c4bd669b4-686wn
+25m         Warning   FailedComputeMetricsReplicas   horizontalpodautoscaler/scaletestapp                    invalid metrics (1 invalid out of 1), first error is: failed to get memory resource metric value: failed to get memory utilization: unable to get metrics for resource memory: no metrics returned from resource metrics API
+20m         Normal    Scheduled                      pod/scaletestapp-db9576465-q57zg                        Successfully assigned task2/scaletestapp-db9576465-q57zg to insuretech-task2
+20m         Normal    SuccessfulCreate               replicaset/scaletestapp-db9576465                       Created pod: scaletestapp-db9576465-q57zg
+20m         Normal    ScalingReplicaSet              deployment/scaletestapp                                 Scaled up replica set scaletestapp-db9576465 from 0 to 1
+20m         Normal    Pulled                         pod/scaletestapp-db9576465-q57zg                        Container image "scaletestapp:task2-f36911e" already present on machine and can be accessed by the pod
+20m         Normal    Started                        pod/scaletestapp-db9576465-q57zg                        Container started
+20m         Normal    SuccessfulDelete               replicaset/scaletestapp-68ddcb47df                      Deleted pod: scaletestapp-68ddcb47df-tkjd7
+20m         Normal    Created                        pod/scaletestapp-db9576465-q57zg                        Container created
+20m         Normal    Killing                        pod/scaletestapp-68ddcb47df-tkjd7                       Stopping container app
+20m         Normal    ScalingReplicaSet              deployment/scaletestapp                                 Scaled down replica set scaletestapp-68ddcb47df from 1 to 0
+20m         Warning   FailedGetResourceMetric        horizontalpodautoscaler/scaletestapp                    failed to get memory utilization: unable to get metrics for resource memory: no metrics returned from resource metrics API
+17m         Normal    SuccessfulRescale              horizontalpodautoscaler/scaletestapp                    New size: 2; reason: memory resource utilization (percentage of request) above target
+17m         Normal    SuccessfulCreate               replicaset/scaletestapp-db9576465                       Created pod: scaletestapp-db9576465-85vp7
+17m         Normal    ScalingReplicaSet              deployment/scaletestapp                                 Scaled up replica set scaletestapp-db9576465 from 1 to 2
+17m         Normal    Scheduled                      pod/scaletestapp-db9576465-85vp7                        Successfully assigned task2/scaletestapp-db9576465-85vp7 to insuretech-task2
+17m         Normal    Pulled                         pod/scaletestapp-db9576465-85vp7                        Container image "scaletestapp:task2-f36911e" already present on machine and can be accessed by the pod
+17m         Normal    Started                        pod/scaletestapp-db9576465-85vp7                        Container started
+17m         Normal    Created                        pod/scaletestapp-db9576465-85vp7                        Container created
+13m         Normal    ScalingReplicaSet              deployment/scaletestapp                                 Scaled up replica set scaletestapp-db9576465 from 2 to 3
+13m         Normal    Scheduled                      pod/scaletestapp-db9576465-gtpvv                        Successfully assigned task2/scaletestapp-db9576465-gtpvv to insuretech-task2
+13m         Normal    SuccessfulRescale              horizontalpodautoscaler/scaletestapp                    New size: 3; reason: memory resource utilization (percentage of request) above target
+13m         Normal    SuccessfulCreate               replicaset/scaletestapp-db9576465                       Created pod: scaletestapp-db9576465-gtpvv
+13m         Normal    Pulled                         pod/scaletestapp-db9576465-gtpvv                        Container image "scaletestapp:task2-f36911e" already present on machine and can be accessed by the pod
+13m         Normal    Created                        pod/scaletestapp-db9576465-gtpvv                        Container created
+13m         Normal    Started                        pod/scaletestapp-db9576465-gtpvv                        Container started
+12m         Normal    Scheduled                      pod/scaletestapp-db9576465-s4tsx                        Successfully assigned task2/scaletestapp-db9576465-s4tsx to insuretech-task2
+12m         Normal    ScalingReplicaSet              deployment/scaletestapp                                 Scaled up replica set scaletestapp-db9576465 from 3 to 4
+12m         Normal    SuccessfulRescale              horizontalpodautoscaler/scaletestapp                    New size: 4; reason: memory resource utilization (percentage of request) above target
+12m         Normal    SuccessfulCreate               replicaset/scaletestapp-db9576465                       Created pod: scaletestapp-db9576465-s4tsx
+12m         Normal    Started                        pod/scaletestapp-db9576465-s4tsx                        Container started
+12m         Normal    Pulled                         pod/scaletestapp-db9576465-s4tsx                        Container image "scaletestapp:task2-f36911e" already present on machine and can be accessed by the pod
+12m         Normal    Created                        pod/scaletestapp-db9576465-s4tsx                        Container created
+11m         Normal    SuccessfulCreate               replicaset/scaletestapp-db9576465                       Created pod: scaletestapp-db9576465-zrtv8
+11m         Normal    ScalingReplicaSet              deployment/scaletestapp                                 Scaled up replica set scaletestapp-db9576465 from 4 to 5
+11m         Normal    SuccessfulRescale              horizontalpodautoscaler/scaletestapp                    New size: 5; reason: memory resource utilization (percentage of request) above target
+11m         Normal    Scheduled                      pod/scaletestapp-db9576465-zrtv8                        Successfully assigned task2/scaletestapp-db9576465-zrtv8 to insuretech-task2
+11m         Normal    Started                        pod/scaletestapp-db9576465-zrtv8                        Container started
+11m         Normal    Created                        pod/scaletestapp-db9576465-zrtv8                        Container created
+11m         Normal    Pulled                         pod/scaletestapp-db9576465-zrtv8                        Container image "scaletestapp:task2-f36911e" already present on machine and can be accessed by the pod
+9m          Normal    Started                        pod/scaletestapp-db9576465-p6gxn                        Container started
+9m          Normal    SuccessfulRescale              horizontalpodautoscaler/scaletestapp                    New size: 6; reason: memory resource utilization (percentage of request) above target
+9m          Normal    SuccessfulCreate               replicaset/scaletestapp-db9576465                       Created pod: scaletestapp-db9576465-p6gxn
+9m          Normal    Scheduled                      pod/scaletestapp-db9576465-p6gxn                        Successfully assigned task2/scaletestapp-db9576465-p6gxn to insuretech-task2
+9m          Normal    Pulled                         pod/scaletestapp-db9576465-p6gxn                        Container image "scaletestapp:task2-f36911e" already present on machine and can be accessed by the pod
+9m          Normal    Created                        pod/scaletestapp-db9576465-p6gxn                        Container created
+8m56s       Normal    SuccessfulDelete               replicaset/scaletestapp-db9576465                       Deleted pod: scaletestapp-db9576465-s4tsx
+8m56s       Normal    SuccessfulDelete               replicaset/scaletestapp-db9576465                       Deleted pod: scaletestapp-db9576465-gtpvv
+8m56s       Normal    Scheduled                      pod/scaletestapp-59dd856cd7-lgjlp                       Successfully assigned task2/scaletestapp-59dd856cd7-lgjlp to insuretech-task2
+8m56s       Normal    SuccessfulCreate               replicaset/scaletestapp-59dd856cd7                      Created pod: scaletestapp-59dd856cd7-lgjlp
+8m56s       Normal    Killing                        pod/scaletestapp-db9576465-s4tsx                        Stopping container app
+8m56s       Normal    SuccessfulDelete               replicaset/scaletestapp-db9576465                       Deleted pod: scaletestapp-db9576465-85vp7
+8m56s       Normal    SuccessfulDelete               replicaset/scaletestapp-db9576465                       Deleted pod: scaletestapp-db9576465-p6gxn
+8m56s       Normal    Killing                        pod/scaletestapp-db9576465-zrtv8                        Stopping container app
+8m56s       Normal    Killing                        pod/scaletestapp-db9576465-gtpvv                        Stopping container app
+8m56s       Normal    Killing                        pod/scaletestapp-db9576465-85vp7                        Stopping container app
+8m56s       Normal    SuccessfulDelete               replicaset/scaletestapp-db9576465                       Deleted pod: scaletestapp-db9576465-zrtv8
+8m55s       Normal    Started                        pod/scaletestapp-59dd856cd7-lgjlp                       Container started
+8m55s       Normal    Killing                        pod/scaletestapp-db9576465-p6gxn                        Stopping container app
+8m55s       Normal    Created                        pod/scaletestapp-59dd856cd7-lgjlp                       Container created
+8m55s       Normal    Pulled                         pod/scaletestapp-59dd856cd7-lgjlp                       Container image "scaletestapp:task2-f36911e" already present on machine and can be accessed by the pod
+8m54s       Normal    SuccessfulDelete               replicaset/scaletestapp-db9576465                       Deleted pod: scaletestapp-db9576465-q57zg
+8m54s       Normal    Killing                        pod/scaletestapp-db9576465-q57zg                        Stopping container app
+54s         Normal    SuccessfulRescale              horizontalpodautoscaler/scaletestapp                    New size: 2; reason: memory resource utilization (percentage of request) above target
+54s         Normal    Created                        pod/scaletestapp-59dd856cd7-zdqbw                       Container created
+54s         Normal    Pulled                         pod/scaletestapp-59dd856cd7-zdqbw                       Container image "scaletestapp:task2-f36911e" already present on machine and can be accessed by the pod
+54s         Normal    Scheduled                      pod/scaletestapp-59dd856cd7-zdqbw                       Successfully assigned task2/scaletestapp-59dd856cd7-zdqbw to insuretech-task2
+54s         Normal    ScalingReplicaSet              deployment/scaletestapp                                 (combined from similar events): Scaled up replica set scaletestapp-59dd856cd7 from 1 to 2
+54s         Normal    Started                        pod/scaletestapp-59dd856cd7-zdqbw                       Container started
+54s         Normal    SuccessfulCreate               replicaset/scaletestapp-59dd856cd7                      Created pod: scaletestapp-59dd856cd7-zdqbw
