@@ -1,0 +1,35 @@
+"""Чтение клиентских данных сервиса client-info."""
+type Query {
+  """Клиент по идентификатору. Если клиент не найден, возвращается null."""
+  client(id: ID!): Client
+}
+
+"""Карточка клиента с отдельно запрашиваемыми документами и родственниками."""
+type Client {
+  id: ID
+  name: String
+  age: Int
+
+  """Документы клиента. Пустой список означает отсутствие документов."""
+  documents: [Document!]
+
+  """Родственники клиента. Пустой список означает отсутствие родственников."""
+  relatives: [Relative!]
+}
+
+"""Документ клиента. Даты передаются строками, как в исходном REST API."""
+type Document {
+  id: ID
+  type: String
+  number: String
+  issueDate: String
+  expiryDate: String
+}
+
+"""Родственник клиента. relationType описывает вид родства."""
+type Relative {
+  id: ID
+  relationType: String
+  name: String
+  age: Int
+}
