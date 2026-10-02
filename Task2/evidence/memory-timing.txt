@@ -1,0 +1,3 @@
+load_start=2026-09-27T19:39:55Z
+load_end=2026-09-27T19:43:56Z
+locust_exit_code=0

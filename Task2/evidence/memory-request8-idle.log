@@ -1,0 +1,37 @@
+2026-09-27T19:37:50Z
+NAME           REFERENCE                 TARGETS           MINPODS   MAXPODS   REPLICAS   AGE
+scaletestapp   Deployment/scaletestapp   memory: 84%/80%   1         10        5          19m
+NAME           READY   UP-TO-DATE   AVAILABLE   AGE
+scaletestapp   5/5     5            5           19m
+NAME                           CPU(cores)   MEMORY(bytes)   
+scaletestapp-db9576465-85vp7   1m           8Mi             
+scaletestapp-db9576465-gtpvv   1m           7Mi             
+scaletestapp-db9576465-q57zg   1m           8Mi             
+scaletestapp-db9576465-s4tsx   1m           5Mi             
+scaletestapp-db9576465-zrtv8   1m           4Mi             
+NAME                           READY   STATUS    RESTARTS   AGE
+scaletestapp-db9576465-85vp7   1/1     Running   0          7m46s
+scaletestapp-db9576465-gtpvv   1/1     Running   0          3m46s
+scaletestapp-db9576465-q57zg   1/1     Running   0          11m
+scaletestapp-db9576465-s4tsx   1/1     Running   0          2m46s
+scaletestapp-db9576465-zrtv8   1/1     Running   0          106s
+2026-09-27T19:38:05Z
+NAME           REFERENCE                 TARGETS           MINPODS   MAXPODS   REPLICAS   AGE
+scaletestapp   Deployment/scaletestapp   memory: 90%/80%   1         10        5          19m
+NAME           READY   UP-TO-DATE   AVAILABLE   AGE
+scaletestapp   5/6     6            5           19m
+NAME                           CPU(cores)   MEMORY(bytes)   
+scaletestapp-db9576465-85vp7   3m           7Mi             
+scaletestapp-db9576465-gtpvv   1m           7Mi             
+scaletestapp-db9576465-q57zg   1m           8Mi             
+scaletestapp-db9576465-s4tsx   1m           6Mi             
+scaletestapp-db9576465-zrtv8   1m           6Mi             
+NAME                           READY   STATUS              RESTARTS   AGE
+scaletestapp-db9576465-85vp7   1/1     Running             0          8m1s
+scaletestapp-db9576465-gtpvv   1/1     Running             0          4m1s
+scaletestapp-db9576465-p6gxn   0/1     ContainerCreating   0          0s
+scaletestapp-db9576465-q57zg   1/1     Running             0          11m
+scaletestapp-db9576465-s4tsx   1/1     Running             0          3m1s
+scaletestapp-db9576465-zrtv8   1/1     Running             0          2m1s
+2026-09-27T19:38:20Z
+Error from server (NotFound): horizontalpodautoscalers.autoscaling "scaletestapp" not found

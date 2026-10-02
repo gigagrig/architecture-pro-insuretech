@@ -1,0 +1,133 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="2440" height="1840" viewBox="0 0 2440 1840">
+<defs><marker id="gray" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto"><path d="M0,0 L10,5 L0,10 Z" fill="#667085"/></marker><marker id="purple" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto"><path d="M0,0 L10,5 L0,10 Z" fill="#7442a5"/></marker></defs>
+<rect width="2440" height="1840" fill="white"/>
+<text font-family="DejaVu Sans,Arial,sans-serif" font-size="30" fill="#344054" font-weight="bold" text-anchor="start"><tspan x="40" y="54">InsureTech — Event-Driven архитектура</tspan></text>
+<rect x="345" y="210" width="1710" height="1420" fill="none" stroke="#98a2b3" stroke-width="2" stroke-dasharray="8 6"/>
+<text font-family="DejaVu Sans,Arial,sans-serif" font-size="20" fill="#344054" font-weight="bold" text-anchor="start"><tspan x="375" y="247">InsureTech [Software System] — логическая граница</tspan></text>
+<polyline points="1200,190 1200,270" fill="none" stroke="#667085" stroke-width="2" marker-end="url(#gray)"/>
+<polyline points="1200,410 1200,560" fill="none" stroke="#667085" stroke-width="2" marker-end="url(#gray)"/>
+<polyline points="1330,330 1660,330" fill="none" stroke="#667085" stroke-width="2" marker-end="url(#gray)"/>
+<polyline points="1070,300 310,300" fill="none" stroke="#667085" stroke-width="2" marker-end="url(#gray)"/>
+<polyline points="1070,680 980,680 980,450 170,450 170,410" fill="none" stroke="#667085" stroke-width="2" marker-end="url(#gray)"/>
+<polyline points="310,600 360,600 360,505 1020,505 1020,605 1070,605" fill="none" stroke="#667085" stroke-width="2" marker-end="url(#gray)"/>
+<polyline points="1370,600 1470,600 1470,385 1660,385" fill="none" stroke="#667085" stroke-width="2" marker-end="url(#gray)"/>
+<polyline points="1820,410 1820,570" fill="none" stroke="#667085" stroke-width="2" marker-end="url(#gray)"/>
+<polyline points="1070,720 890,720" fill="none" stroke="#667085" stroke-width="2" marker-end="url(#gray)"/>
+<polyline points="1090,750 1090,820 570,820 570,1060" fill="none" stroke="#667085" stroke-width="2" marker-end="url(#gray)"/>
+<polyline points="1150,750 1150,1060" fill="none" stroke="#7442a5" stroke-width="2" stroke-dasharray="8 5" marker-end="url(#purple)"/>
+<polyline points="1270,1060 1270,750" fill="none" stroke="#7442a5" stroke-width="2" stroke-dasharray="8 5" marker-end="url(#purple)"/>
+<polyline points="730,1130 1030,1130" fill="none" stroke="#7442a5" stroke-width="2" stroke-dasharray="8 5" marker-end="url(#purple)"/>
+<polyline points="1370,1140 1670,1140" fill="none" stroke="#7442a5" stroke-width="2" stroke-dasharray="8 5" marker-end="url(#purple)"/>
+<polyline points="570,1240 570,1350" fill="none" stroke="#667085" stroke-width="2" marker-end="url(#gray)"/>
+<polyline points="1830,1240 1830,1350" fill="none" stroke="#667085" stroke-width="2" marker-end="url(#gray)"/>
+<polyline points="410,1160 365,1160 365,1580 2270,1580 2270,1070" fill="none" stroke="#667085" stroke-width="2" marker-end="url(#gray)"/>
+<polyline points="1990,1190 2070,1190 2070,990 2120,990" fill="none" stroke="#667085" stroke-width="2" marker-end="url(#gray)"/>
+<rect x="1070" y="90" width="260" height="100" rx="12" fill="#104a7d"/>
+<text font-family="DejaVu Sans,Arial,sans-serif" font-size="19" fill="white" font-weight="bold" text-anchor="middle"><tspan x="1200.0" y="120">Клиент</tspan></text>
+<text font-family="DejaVu Sans,Arial,sans-serif" font-size="15" fill="white" font-weight="normal" text-anchor="middle"><tspan x="1200.0" y="143">[Person]</tspan></text>
+<text font-family="DejaVu Sans,Arial,sans-serif" font-size="16" fill="white" font-weight="normal" text-anchor="middle"><tspan x="1200.0" y="176">Оформляет страховку</tspan></text>
+<rect x="1070" y="270" width="260" height="140" rx="12" fill="#229dca"/>
+<text font-family="DejaVu Sans,Arial,sans-serif" font-size="19" fill="white" font-weight="bold" text-anchor="middle"><tspan x="1200.0" y="300">InsureTech Web</tspan></text>
+<text font-family="DejaVu Sans,Arial,sans-serif" font-size="15" fill="white" font-weight="normal" text-anchor="middle"><tspan x="1200.0" y="323">[Container: JavaScript, React]</tspan></text>
+<text font-family="DejaVu Sans,Arial,sans-serif" font-size="16" fill="white" font-weight="normal" text-anchor="middle"><tspan x="1200.0" y="356">Веб-приложение</tspan></text>
+<rect x="30" y="270" width="280" height="140" rx="12" fill="#8b8497"/>
+<text font-family="DejaVu Sans,Arial,sans-serif" font-size="19" fill="white" font-weight="bold" text-anchor="middle"><tspan x="170.0" y="300">Платёжный сервис</tspan></text>
+<text font-family="DejaVu Sans,Arial,sans-serif" font-size="15" fill="white" font-weight="normal" text-anchor="middle"><tspan x="170.0" y="323">[Software System]</tspan></text>
+<text font-family="DejaVu Sans,Arial,sans-serif" font-size="16" fill="white" font-weight="normal" text-anchor="middle"><tspan x="170.0" y="356">Оплата страховки на счёт</tspan><tspan x="170.0" y="378">страховой компании</tspan></text>
+<rect x="30" y="540" width="280" height="150" rx="12" fill="#8b8497"/>
+<text font-family="DejaVu Sans,Arial,sans-serif" font-size="19" fill="white" font-weight="bold" text-anchor="middle"><tspan x="170.0" y="570">Системы партнёров</tspan></text>
+<text font-family="DejaVu Sans,Arial,sans-serif" font-size="15" fill="white" font-weight="normal" text-anchor="middle"><tspan x="170.0" y="593">[Software System]</tspan></text>
+<text font-family="DejaVu Sans,Arial,sans-serif" font-size="16" fill="white" font-weight="normal" text-anchor="middle"><tspan x="170.0" y="626">Интегрируют оформление</tspan><tspan x="170.0" y="648">в собственные продукты</tspan></text>
+<rect x="1070" y="560" width="300" height="190" rx="12" fill="#229dca"/>
+<text font-family="DejaVu Sans,Arial,sans-serif" font-size="19" fill="white" font-weight="bold" text-anchor="middle"><tspan x="1220.0" y="590">core-app</tspan></text>
+<text font-family="DejaVu Sans,Arial,sans-serif" font-size="15" fill="white" font-weight="normal" text-anchor="middle"><tspan x="1220.0" y="613">[Container: Kotlin, SpringBoot]</tspan></text>
+<text font-family="DejaVu Sans,Arial,sans-serif" font-size="16" fill="white" font-weight="normal" text-anchor="middle"><tspan x="1220.0" y="646">Продукты, оформление,</tspan><tspan x="1220.0" y="668">история полисов</tspan><tspan x="1220.0" y="690">Локальная копия каталога</tspan><tspan x="1220.0" y="712">Издатель outbox внутри сервиса</tspan></text>
+<path d="M600,606 C600,585 890,585 890,606 L890,734 C890,755 600,755 600,734 Z" fill="#229dca" stroke="#147eaa"/>
+<path d="M600,606 C600,627 890,627 890,606" fill="none" stroke="#147eaa"/>
+<text font-family="DejaVu Sans,Arial,sans-serif" font-size="19" fill="white" font-weight="bold" text-anchor="middle"><tspan x="745.0" y="630">core-db</tspan></text>
+<text font-family="DejaVu Sans,Arial,sans-serif" font-size="15" fill="white" font-weight="normal" text-anchor="middle"><tspan x="745.0" y="653">[Container: PostgreSQL schema]</tspan></text>
+<text font-family="DejaVu Sans,Arial,sans-serif" font-size="16" fill="white" font-weight="normal" text-anchor="middle"><tspan x="745.0" y="686">Полисы и условия сделки</tspan><tspan x="745.0" y="708">Копия каталога + inbox</tspan><tspan x="745.0" y="730">Полис + outbox атомарно</tspan></text>
+<rect x="1660" y="270" width="320" height="140" rx="12" fill="#229dca"/>
+<text font-family="DejaVu Sans,Arial,sans-serif" font-size="19" fill="white" font-weight="bold" text-anchor="middle"><tspan x="1820.0" y="300">client-info</tspan></text>
+<text font-family="DejaVu Sans,Arial,sans-serif" font-size="15" fill="white" font-weight="normal" text-anchor="middle"><tspan x="1820.0" y="323">[Container: Kotlin, SpringBoot]</tspan></text>
+<text font-family="DejaVu Sans,Arial,sans-serif" font-size="16" fill="white" font-weight="normal" text-anchor="middle"><tspan x="1820.0" y="356">Чтение и изменение</tspan><tspan x="1820.0" y="378">клиентских данных</tspan></text>
+<path d="M1660,586 C1660,565 1980,565 1980,586 L1980,704 C1980,725 1660,725 1660,704 Z" fill="#229dca" stroke="#147eaa"/>
+<path d="M1660,586 C1660,607 1980,607 1980,586" fill="none" stroke="#147eaa"/>
+<text font-family="DejaVu Sans,Arial,sans-serif" font-size="19" fill="white" font-weight="bold" text-anchor="middle"><tspan x="1820.0" y="610">client-info-db</tspan></text>
+<text font-family="DejaVu Sans,Arial,sans-serif" font-size="15" fill="white" font-weight="normal" text-anchor="middle"><tspan x="1820.0" y="633">[Container: PostgreSQL schema]</tspan></text>
+<text font-family="DejaVu Sans,Arial,sans-serif" font-size="16" fill="white" font-weight="normal" text-anchor="middle"><tspan x="1820.0" y="666">Клиентские данные</tspan><tspan x="1820.0" y="688">Отдельная схема client-info</tspan></text>
+<rect x="410" y="1060" width="320" height="180" rx="12" fill="#229dca"/>
+<text font-family="DejaVu Sans,Arial,sans-serif" font-size="19" fill="white" font-weight="bold" text-anchor="middle"><tspan x="570.0" y="1090">ins-product-aggregator</tspan></text>
+<text font-family="DejaVu Sans,Arial,sans-serif" font-size="15" fill="white" font-weight="normal" text-anchor="middle"><tspan x="570.0" y="1113">[Container: Kotlin, SpringBoot]</tspan></text>
+<text font-family="DejaVu Sans,Arial,sans-serif" font-size="16" fill="white" font-weight="normal" text-anchor="middle"><tspan x="570.0" y="1146">Независимый опрос страховщиков</tspan><tspan x="570.0" y="1168">Нормализация каталога и тарифов</tspan><tspan x="570.0" y="1190">Планировщик и издатель outbox</tspan></text>
+<rect x="1030" y="1060" width="340" height="180" rx="12" fill="#7442a5"/>
+<text font-family="DejaVu Sans,Arial,sans-serif" font-size="19" fill="white" font-weight="bold" text-anchor="middle"><tspan x="1200.0" y="1090">Apache Kafka</tspan></text>
+<text font-family="DejaVu Sans,Arial,sans-serif" font-size="15" fill="white" font-weight="normal" text-anchor="middle"><tspan x="1200.0" y="1113">[Container: Event Streaming]</tspan></text>
+<text font-family="DejaVu Sans,Arial,sans-serif" font-size="16" fill="white" font-weight="normal" text-anchor="middle"><tspan x="1200.0" y="1146">T1: catalog.product-state.v1</tspan><tspan x="1200.0" y="1168">T2: insurance.policy-state.v1</tspan><tspan x="1200.0" y="1190">Повторное чтение событий</tspan></text>
+<rect x="1670" y="1060" width="320" height="180" rx="12" fill="#229dca"/>
+<text font-family="DejaVu Sans,Arial,sans-serif" font-size="19" fill="white" font-weight="bold" text-anchor="middle"><tspan x="1830.0" y="1090">ins-comp-settlement</tspan></text>
+<text font-family="DejaVu Sans,Arial,sans-serif" font-size="15" fill="white" font-weight="normal" text-anchor="middle"><tspan x="1830.0" y="1113">[Container: Kotlin, SpringBoot]</tspan></text>
+<text font-family="DejaVu Sans,Arial,sans-serif" font-size="16" fill="white" font-weight="normal" text-anchor="middle"><tspan x="1830.0" y="1146">Копии каталога и полисов</tspan><tspan x="1830.0" y="1168">Суточный реестр и сверка</tspan><tspan x="1830.0" y="1190">Ежемесячные взаиморасчёты</tspan></text>
+<rect x="2120" y="910" width="280" height="160" rx="12" fill="#8b8497"/>
+<text font-family="DejaVu Sans,Arial,sans-serif" font-size="19" fill="white" font-weight="bold" text-anchor="middle"><tspan x="2260.0" y="940">Страховые компании</tspan></text>
+<text font-family="DejaVu Sans,Arial,sans-serif" font-size="15" fill="white" font-weight="normal" text-anchor="middle"><tspan x="2260.0" y="963">[Software System]</tspan></text>
+<text font-family="DejaVu Sans,Arial,sans-serif" font-size="16" fill="white" font-weight="normal" text-anchor="middle"><tspan x="2260.0" y="996">Переход с 5 на 10 компаний</tspan><tspan x="2260.0" y="1018">API продуктов и расчётов</tspan></text>
+<path d="M410,1366 C410,1345 730,1345 730,1366 L730,1484 C730,1505 410,1505 410,1484 Z" fill="#229dca" stroke="#147eaa"/>
+<path d="M410,1366 C410,1387 730,1387 730,1366" fill="none" stroke="#147eaa"/>
+<text font-family="DejaVu Sans,Arial,sans-serif" font-size="19" fill="white" font-weight="bold" text-anchor="middle"><tspan x="570.0" y="1390">aggregator-db</tspan></text>
+<text font-family="DejaVu Sans,Arial,sans-serif" font-size="15" fill="white" font-weight="normal" text-anchor="middle"><tspan x="570.0" y="1413">[Container: PostgreSQL schema]</tspan></text>
+<text font-family="DejaVu Sans,Arial,sans-serif" font-size="16" fill="white" font-weight="normal" text-anchor="middle"><tspan x="570.0" y="1446">Новая схема: каталог и версии</tspan><tspan x="570.0" y="1468">Статус опроса; каталог + outbox</tspan><tspan x="570.0" y="1490">в одной транзакции</tspan></text>
+<path d="M1670,1366 C1670,1345 1990,1345 1990,1366 L1990,1484 C1990,1505 1670,1505 1670,1484 Z" fill="#229dca" stroke="#147eaa"/>
+<path d="M1670,1366 C1670,1387 1990,1387 1990,1366" fill="none" stroke="#147eaa"/>
+<text font-family="DejaVu Sans,Arial,sans-serif" font-size="19" fill="white" font-weight="bold" text-anchor="middle"><tspan x="1830.0" y="1390">ins-comp-settlement-db</tspan></text>
+<text font-family="DejaVu Sans,Arial,sans-serif" font-size="15" fill="white" font-weight="normal" text-anchor="middle"><tspan x="1830.0" y="1413">[Container: PostgreSQL schema]</tspan></text>
+<text font-family="DejaVu Sans,Arial,sans-serif" font-size="16" fill="white" font-weight="normal" text-anchor="middle"><tspan x="1830.0" y="1446">Каталог, полисы, inbox, карантин</tspan><tspan x="1830.0" y="1468">История версий, реестры</tspan><tspan x="1830.0" y="1490">Задания отправки и сверки</tspan></text>
+<rect x="1230.0" y="210.0" width="240" height="30" fill="white"/>
+<text font-family="DejaVu Sans,Arial,sans-serif" font-size="17" fill="#344054" font-weight="normal" text-anchor="middle"><tspan x="1350" y="231.0">Использует [HTTPS]</tspan></text>
+<rect x="1070.0" y="454.0" width="260" height="52" fill="white"/>
+<text font-family="DejaVu Sans,Arial,sans-serif" font-size="17" fill="#344054" font-weight="normal" text-anchor="middle"><tspan x="1200" y="475.0">Продукты и оформление</tspan><tspan x="1200" y="497.0">[REST / HTTPS]</tspan></text>
+<rect x="1375.0" y="274.0" width="240" height="52" fill="white"/>
+<text font-family="DejaVu Sans,Arial,sans-serif" font-size="17" fill="#344054" font-weight="normal" text-anchor="middle"><tspan x="1495" y="295.0">Клиентские данные</tspan><tspan x="1495" y="317.0">[REST / HTTPS]</tspan></text>
+<rect x="470.0" y="267.0" width="440" height="30" fill="white"/>
+<text font-family="DejaVu Sans,Arial,sans-serif" font-size="17" fill="#344054" font-weight="normal" text-anchor="middle"><tspan x="690" y="288.0">Перенаправление на оплату [HTTPS]</tspan></text>
+<rect x="495.0" y="417.0" width="370" height="30" fill="white"/>
+<text font-family="DejaVu Sans,Arial,sans-serif" font-size="17" fill="#344054" font-weight="normal" text-anchor="middle"><tspan x="680" y="438.0">Проведение оплаты [HTTPS]</tspan></text>
+<rect x="445.0" y="472.0" width="430" height="30" fill="white"/>
+<text font-family="DejaVu Sans,Arial,sans-serif" font-size="17" fill="#344054" font-weight="normal" text-anchor="middle"><tspan x="660" y="493.0">Оформление полисов [REST / HTTPS]</tspan></text>
+<rect x="1350.0" y="439.0" width="260" height="52" fill="white"/>
+<text font-family="DejaVu Sans,Arial,sans-serif" font-size="17" fill="#344054" font-weight="normal" text-anchor="middle"><tspan x="1480" y="460.0">Клиентские данные</tspan><tspan x="1480" y="482.0">[REST / HTTPS]</tspan></text>
+<rect x="1680.0" y="477.0" width="280" height="30" fill="white"/>
+<text font-family="DejaVu Sans,Arial,sans-serif" font-size="17" fill="#344054" font-weight="normal" text-anchor="middle"><tspan x="1820" y="498.0">Своя схема [SQL / TLS]</tspan></text>
+<rect x="915.0" y="689.0" width="130" height="30" fill="white"/>
+<text font-family="DejaVu Sans,Arial,sans-serif" font-size="17" fill="#344054" font-weight="normal" text-anchor="middle"><tspan x="980" y="710.0">SQL / TLS</tspan></text>
+<rect x="510.0" y="772.0" width="450" height="52" fill="white"/>
+<text font-family="DejaVu Sans,Arial,sans-serif" font-size="17" fill="#344054" font-weight="normal" text-anchor="middle"><tspan x="735" y="793.0">Индивидуальные предложения ОСАГО</tspan><tspan x="735" y="815.0">[REST; вне потока каталога]</tspan></text>
+<rect x="870.0" y="853.0" width="260" height="74" fill="white"/>
+<text font-family="DejaVu Sans,Arial,sans-serif" font-size="17" fill="#7442a5" font-weight="normal" text-anchor="middle"><tspan x="1000" y="874.0">T2: PolicyStateChanged</tspan><tspan x="1000" y="896.0">и PeriodCheckpoint</tspan><tspan x="1000" y="918.0">[Kafka / TLS]</tspan></text>
+<rect x="1290.0" y="873.0" width="280" height="74" fill="white"/>
+<text font-family="DejaVu Sans,Arial,sans-serif" font-size="17" fill="#7442a5" font-weight="normal" text-anchor="middle"><tspan x="1430" y="894.0">T1: каталог и свежесть</tspan><tspan x="1430" y="916.0">Группа core-catalog</tspan><tspan x="1430" y="938.0">[Kafka / TLS]</tspan></text>
+<rect x="740.0" y="1068.0" width="280" height="52" fill="white"/>
+<text font-family="DejaVu Sans,Arial,sans-serif" font-size="17" fill="#7442a5" font-weight="normal" text-anchor="middle"><tspan x="880" y="1089.0">T1: каталог и свежесть</tspan><tspan x="880" y="1111.0">[Kafka / TLS]</tspan></text>
+<rect x="1375.0" y="1048.0" width="290" height="74" fill="white"/>
+<text font-family="DejaVu Sans,Arial,sans-serif" font-size="17" fill="#7442a5" font-weight="normal" text-anchor="middle"><tspan x="1520" y="1069.0">T1 и T2 [Kafka / TLS]</tspan><tspan x="1520" y="1091.0">Группы: settlement-catalog</tspan><tspan x="1520" y="1113.0">и settlement-policies</tspan></text>
+<rect x="430.0" y="1283.0" width="280" height="30" fill="white"/>
+<text font-family="DejaVu Sans,Arial,sans-serif" font-size="17" fill="#344054" font-weight="normal" text-anchor="middle"><tspan x="570" y="1304.0">Своя схема [SQL / TLS]</tspan></text>
+<rect x="1690.0" y="1283.0" width="280" height="30" fill="white"/>
+<text font-family="DejaVu Sans,Arial,sans-serif" font-size="17" fill="#344054" font-weight="normal" text-anchor="middle"><tspan x="1830" y="1304.0">Своя схема [SQL / TLS]</tspan></text>
+<rect x="480.0" y="1545.0" width="1580" height="30" fill="white"/>
+<text font-family="DejaVu Sans,Arial,sans-serif" font-size="17" fill="#344054" font-weight="normal" text-anchor="middle"><tspan x="1270" y="1566.0">Независимый опрос продуктов и тарифов; тайм-ауты и повторы по компании [REST / SOAP / GraphQL, TLS]</tspan></text>
+<rect x="1995.0" y="1223.0" width="250" height="74" fill="white"/>
+<text font-family="DejaVu Sans,Arial,sans-serif" font-size="17" fill="#344054" font-weight="normal" text-anchor="middle"><tspan x="2120" y="1244.0">Отправка реестра</tspan><tspan x="2120" y="1266.0">раз в месяц</tspan><tspan x="2120" y="1288.0">[API / TLS]</tspan></text>
+<rect x="40" y="1670" width="280" height="125" rx="10" fill="#f3f5f9" stroke="#d0d5dd"/>
+<text font-family="DejaVu Sans,Arial,sans-serif" font-size="18" fill="#344054" font-weight="bold" text-anchor="start"><tspan x="58" y="1697">Связи</tspan></text>
+<text font-family="DejaVu Sans,Arial,sans-serif" font-size="16" fill="#344054" font-weight="normal" text-anchor="start"><tspan x="58" y="1725">Серая: API / SQL</tspan><tspan x="58" y="1748">Фиолетовая: события</tspan><tspan x="58" y="1771">TLS: шифрование канала</tspan></text>
+<rect x="360" y="1670" width="520" height="125" rx="10" fill="#f3f5f9" stroke="#d0d5dd"/>
+<text font-family="DejaVu Sans,Arial,sans-serif" font-size="18" fill="#344054" font-weight="bold" text-anchor="start"><tspan x="378" y="1697">Надёжная доставка</tspan></text>
+<text font-family="DejaVu Sans,Arial,sans-serif" font-size="16" fill="#344054" font-weight="normal" text-anchor="start"><tspan x="378" y="1725">Outbox: бизнес-запись и событие фиксируются вместе.</tspan><tspan x="378" y="1748">Доставка как минимум один раз; eventId + версия,</tspan><tspan x="378" y="1771">запись проекции и inbox до подтверждения offset.</tspan></text>
+<rect x="920" y="1670" width="520" height="125" rx="10" fill="#f3f5f9" stroke="#d0d5dd"/>
+<text font-family="DejaVu Sans,Arial,sans-serif" font-size="18" fill="#344054" font-weight="bold" text-anchor="start"><tspan x="938" y="1697">Согласованность реестра</tspan></text>
+<text font-family="DejaVu Sans,Arial,sans-serif" font-size="16" fill="#344054" font-weight="normal" text-anchor="start"><tspan x="938" y="1725">Оформление ≠ заявка или платёжный redirect.</tspan><tspan x="938" y="1748">Условия полиса фиксируются на момент сделки.</tspan><tspan x="938" y="1771">Закрытие периода: маркеры, сверка, карантин пуст.</tspan></text>
+<rect x="1480" y="1670" width="560" height="125" rx="10" fill="#f3f5f9" stroke="#d0d5dd"/>
+<text font-family="DejaVu Sans,Arial,sans-serif" font-size="18" fill="#344054" font-weight="bold" text-anchor="start"><tspan x="1498" y="1697">Уровень C4: контейнеры</tspan></text>
+<text font-family="DejaVu Sans,Arial,sans-serif" font-size="16" fill="#344054" font-weight="normal" text-anchor="start"><tspan x="1498" y="1725">Все схемы БД — один логический PostgreSQL из Task1.</tspan><tspan x="1498" y="1748">Kafka — новая инфраструктура, не бизнес-сервис.</tspan><tspan x="1498" y="1771">Физическое размещение и восстановление — см. README.</tspan></text>
+</svg>

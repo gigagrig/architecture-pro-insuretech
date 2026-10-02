@@ -1,0 +1,33 @@
+LAST SEEN   TYPE      REASON                         OBJECT                                                  MESSAGE
+6m1s        Normal    Scheduled                      pod/scaletestapp-6c4bd669b4-686wn                       Successfully assigned task2/scaletestapp-6c4bd669b4-686wn to insuretech-task2
+6m1s        Normal    SuccessfulCreate               replicaset/scaletestapp-6c4bd669b4                      Created pod: scaletestapp-6c4bd669b4-686wn
+6m1s        Normal    SuccessfulCreate               replicaset/prometheus-c5b794f56                         Created pod: prometheus-c5b794f56-5v6m6
+6m1s        Normal    ScalingReplicaSet              deployment/prometheus                                   Scaled up replica set prometheus-c5b794f56 from 0 to 1
+6m1s        Normal    ScalingReplicaSet              deployment/scaletestapp                                 Scaled up replica set scaletestapp-6c4bd669b4 from 0 to 1
+6m1s        Normal    Scheduled                      pod/prometheus-c5b794f56-5v6m6                          Successfully assigned task2/prometheus-c5b794f56-5v6m6 to insuretech-task2
+6m          Normal    Pulling                        pod/prometheus-c5b794f56-5v6m6                          Pulling image "prom/prometheus:v3.2.1"
+5m37s       Normal    Pulled                         pod/prometheus-c5b794f56-5v6m6                          Successfully pulled image "prom/prometheus:v3.2.1" in 22.422s (23.616s including waiting). Image size: 289268919 bytes.
+5m37s       Normal    Created                        pod/prometheus-c5b794f56-5v6m6                          Container created
+5m37s       Normal    Started                        pod/prometheus-c5b794f56-5v6m6                          Container started
+4m22s       Normal    SuccessfulCreate               replicaset/task2-adapter-prometheus-adapter-5ffb598fd   Created pod: task2-adapter-prometheus-adapter-5ffb598fd-f7q6w
+4m22s       Normal    ScalingReplicaSet              deployment/task2-adapter-prometheus-adapter             Scaled up replica set task2-adapter-prometheus-adapter-5ffb598fd from 0 to 1
+4m22s       Normal    Scheduled                      pod/task2-adapter-prometheus-adapter-5ffb598fd-f7q6w    Successfully assigned task2/task2-adapter-prometheus-adapter-5ffb598fd-f7q6w to insuretech-task2
+4m21s       Normal    Pulling                        pod/task2-adapter-prometheus-adapter-5ffb598fd-f7q6w    Pulling image "registry.k8s.io/prometheus-adapter/prometheus-adapter:v0.12.0"
+4m17s       Normal    Pulling                        pod/scaletestapp-6c4bd669b4-686wn                       Pulling image "ghcr.io/yandex-practicum/scaletestapp:latest"
+4m14s       Normal    Started                        pod/task2-adapter-prometheus-adapter-5ffb598fd-f7q6w    Container started
+4m14s       Normal    Created                        pod/task2-adapter-prometheus-adapter-5ffb598fd-f7q6w    Container created
+4m14s       Normal    Pulled                         pod/task2-adapter-prometheus-adapter-5ffb598fd-f7q6w    Successfully pulled image "registry.k8s.io/prometheus-adapter/prometheus-adapter:v0.12.0" in 6.766s (6.766s including waiting). Image size: 86771663 bytes.
+4m13s       Warning   Failed                         pod/scaletestapp-6c4bd669b4-686wn                       Error: ErrImagePull
+4m13s       Warning   Failed                         pod/scaletestapp-6c4bd669b4-686wn                       Failed to pull image "ghcr.io/yandex-practicum/scaletestapp:latest": no matching manifest for linux/arm64/v8 in the manifest list entries
+3m17s       Normal    BackOff                        pod/scaletestapp-6c4bd669b4-686wn                       Back-off pulling image "ghcr.io/yandex-practicum/scaletestapp:latest"
+3m17s       Warning   Failed                         pod/scaletestapp-6c4bd669b4-686wn                       Error: ImagePullBackOff
+3m8s        Normal    SuccessfulCreate               replicaset/scaletestapp-68ddcb47df                      Created pod: scaletestapp-68ddcb47df-tkjd7
+3m8s        Normal    ScalingReplicaSet              deployment/scaletestapp                                 Scaled up replica set scaletestapp-68ddcb47df from 0 to 1
+3m8s        Normal    Scheduled                      pod/scaletestapp-68ddcb47df-tkjd7                       Successfully assigned task2/scaletestapp-68ddcb47df-tkjd7 to insuretech-task2
+3m7s        Normal    Pulled                         pod/scaletestapp-68ddcb47df-tkjd7                       Container image "scaletestapp:task2-f36911e" already present on machine and can be accessed by the pod
+3m7s        Normal    Started                        pod/scaletestapp-68ddcb47df-tkjd7                       Container started
+3m7s        Normal    Created                        pod/scaletestapp-68ddcb47df-tkjd7                       Container created
+3m6s        Normal    ScalingReplicaSet              deployment/scaletestapp                                 Scaled down replica set scaletestapp-6c4bd669b4 from 1 to 0
+3m6s        Normal    SuccessfulDelete               replicaset/scaletestapp-6c4bd669b4                      Deleted pod: scaletestapp-6c4bd669b4-686wn
+3m1s        Warning   FailedComputeMetricsReplicas   horizontalpodautoscaler/scaletestapp                    invalid metrics (1 invalid out of 1), first error is: failed to get memory resource metric value: failed to get memory utilization: unable to get metrics for resource memory: no metrics returned from resource metrics API
+2m46s       Warning   FailedGetResourceMetric        horizontalpodautoscaler/scaletestapp                    failed to get memory utilization: unable to get metrics for resource memory: no metrics returned from resource metrics API

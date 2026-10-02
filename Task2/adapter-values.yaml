@@ -1,0 +1,25 @@
+prometheus:
+  url: http://prometheus.task2.svc.cluster.local
+  port: 9090
+metricsRelistInterval: 30s
+resources:
+  requests:
+    cpu: 50m
+    memory: 64Mi
+  limits:
+    cpu: 500m
+    memory: 192Mi
+rules:
+  default: false
+  custom:
+    - seriesQuery: 'http_requests_total{namespace="task2",pod!="",job="scaletestapp"}'
+      resources:
+        overrides:
+          namespace:
+            resource: namespace
+          pod:
+            resource: pod
+      name:
+        matches: '^http_requests_total$'
+        as: http_requests_per_second
+      metricsQuery: 'sum(rate(<<.Series>>{<<.LabelMatchers>>,job="scaletestapp"}[1m])) by (<<.GroupBy>>)'
